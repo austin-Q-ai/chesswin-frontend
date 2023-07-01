@@ -9,6 +9,10 @@ import { NotFoundComponent } from '../components/not-found/not-found.component';
 
 const routes: Routes = [
 	{
+		path: '',
+		loadChildren: () => import('../../chesswin/landing/landing.module').then(landingModule => landingModule.LandingModule)
+	},
+	{
 		path: 'app',
 		loadChildren: () => import('../../chesswin/chess-app/chess-app.module').then(chessAppModule => chessAppModule.ChessAppModule),
 		canActivate: [AuthGuard]

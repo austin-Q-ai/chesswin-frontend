@@ -6,7 +6,6 @@ import { HttpClientModule } from '@angular/common/http';
 // modules
 import { FacadeModule } from 'facade-module';
 import { CommonModule } from 'common-module';
-import { LandingModule } from '../chesswin/landing/landing.module';
 
 // guards
 import { AdminGuard } from '../guards/admin.guard';
@@ -30,7 +29,7 @@ import { StarComponent } from './components/mobile-banner/star/star.component';
 
 @NgModule({
 	declarations: [AppComponent, NotFoundComponent, MobileBannerComponent, StarComponent],
-	imports: [BrowserModule, BrowserAnimationsModule, HttpClientModule, FacadeModule, CommonModule, LandingModule, AppRouting],
+	imports: [BrowserModule, BrowserAnimationsModule, HttpClientModule, FacadeModule, CommonModule, AppRouting],
 	providers: [AdminGuard, AuthGuard, GameGuard, HomeGuard, CookieService],
 	bootstrap: [AppComponent]
 })
