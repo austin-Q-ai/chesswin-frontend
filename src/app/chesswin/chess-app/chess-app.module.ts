@@ -7,7 +7,6 @@ import { CommonModule } from 'common-module';
 import { ChessAppRoutingModule } from './routing/chess-app.routing';
 
 // containers
-import { DashboardComponent } from './containers/dashboard/dashboard.component';
 import { GameComponent } from './containers/game/game.component';
 
 // components
@@ -16,7 +15,6 @@ import { FriendsViewComponent } from './components/side-nav/friends-view/friends
 import { GameEngineComponent } from './components/game/game-engine/game-engine.component';
 import { GameViewComponent } from './components/game/game-view/game-view.component';
 import { MessagesViewComponent } from './components/messages-view/messages-view.component';
-import { ProfileViewComponent } from './components/side-nav/profile-view/profile-view.component';
 import { ChallengeDialogComponent } from './components/side-nav/challenge-dialog/challenge-dialog.component';
 import { PackagesViewComponent } from '../landing/components/packages-view/packages-view.component';
 import { PackagesComponent } from '../landing/containers/packages/packages.component';
@@ -33,7 +31,6 @@ import { CreditCardViewComponent } from './components/side-nav/credit-card-view/
 	],
 	declarations: [
 		// containers
-		DashboardComponent,
 		GameComponent,
 		PackagesComponent,
 		// components
@@ -43,7 +40,6 @@ import { CreditCardViewComponent } from './components/side-nav/credit-card-view/
 		GameEngineComponent,
 		GameViewComponent,
 		MessagesViewComponent,
-		ProfileViewComponent,
 		// dialogs
 		ChallengeDialogComponent,
 		ConvertToCashViewComponent,

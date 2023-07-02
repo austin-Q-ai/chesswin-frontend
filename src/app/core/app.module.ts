@@ -26,9 +26,11 @@ import { AppComponent } from './containers/app/app.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { MobileBannerComponent } from './components/mobile-banner/mobile-banner.component';
 import { StarComponent } from './components/mobile-banner/star/star.component';
+import { SidenavComponent } from './containers/sidenav/sidenav.component';
+import { ProfileViewComponent } from './components/profile-view/profile-view.component';
 
 @NgModule({
-	declarations: [AppComponent, NotFoundComponent, MobileBannerComponent, StarComponent],
+	declarations: [AppComponent, NotFoundComponent, MobileBannerComponent, StarComponent, SidenavComponent, ProfileViewComponent],
 	imports: [BrowserModule, BrowserAnimationsModule, HttpClientModule, FacadeModule, CommonModule, AppRouting],
 	providers: [AdminGuard, AuthGuard, GameGuard, HomeGuard, CookieService],
 	bootstrap: [AppComponent]

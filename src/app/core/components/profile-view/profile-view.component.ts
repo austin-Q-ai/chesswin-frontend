@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy, Input, Output, EventEmitter } from '@angular/core';
 
 // interfaces
-import { User } from '../../../../../common/models/user';
+import { User } from '../../../common/models/user';
 
 @Component({
 	selector: 'app-profile-view',

@@ -1,0 +1,32 @@
+<mat-icon class="menu-toggler" (click)="showMenu = !showMenu">{{
+	showMenu ? 'clear' : 'dehaze'
+	}}</mat-icon>
+
+<div>
+	<mat-sidenav-container class="viewport">
+		<mat-sidenav class="side-nav" [opened]="showMenu" fixedInViewport="true"
+			[mode]="responsiveView ? 'over' : 'side'" (closed)="showMenu = false">
+
+			<app-profile-view></app-profile-view>
+		</mat-sidenav>
+
+		<div class="main-content">
+			<!-- <div class="header-description">
+				<h1 class="heading1 packages-title" (click)="navigateToPackages()">
+					Buy Gold Coins
+				</h1>
+				<h1 class="heading1 packages-title" (click)="navigateToCash()">
+					Convert to Cash
+				</h1>
+			</div> -->
+
+			<router-outlet></router-outlet>
+
+			<!-- <div>
+				<p style="color: white;" (click)="navigateToCreditCard()">
+					Credit Card
+				</p>
+			</div> -->
+		</div>
+	</mat-sidenav-container>
+</div>
