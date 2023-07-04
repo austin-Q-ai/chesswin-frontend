@@ -1,0 +1,20 @@
+@import '../../../../assets/style/style.scss';
+
+.side-nav-item {
+	text-align: left;
+	align-items: center;
+	color: white;
+	font-size: 15px;
+	padding: 10px 32px;
+	border-bottom: 2px solid rgb(23, 45, 63);
+	display: flex;
+}
+
+.side-nav-item-icon {
+	width: 20px;
+	height: 20px;
+}
+
+.side-nav-item-text {
+	padding-left: 20px;
+}

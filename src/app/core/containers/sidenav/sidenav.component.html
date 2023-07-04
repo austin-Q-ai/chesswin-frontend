@@ -8,6 +8,10 @@
 			[mode]="responsiveView ? 'over' : 'side'" (closed)="showMenu = false">
 
 			<app-profile-view></app-profile-view>
+			<div *ngFor="let item of items">
+				<app-sidenav-item [iconUrl]="item.iconURL" [itemText]="item.itemText"></app-sidenav-item>
+			</div>
+			<app-sidenav-log-button></app-sidenav-log-button>
 		</mat-sidenav>
 
 		<div class="main-content">

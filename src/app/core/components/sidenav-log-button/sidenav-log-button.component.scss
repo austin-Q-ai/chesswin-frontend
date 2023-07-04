@@ -1,0 +1,18 @@
+@import '../../../../assets/style/style.scss';
+
+
+.side-nav-item.button {
+	align-items: center;
+    display: flex;
+    flex-direction: column;
+	margin-top: 30%;
+}
+
+.side-nav-item-button {
+	width: 40%;
+	font-family: "aileron-bold", sans-serif;
+	font-size: 18px;
+	margin: 10px 0;
+	height: 30px;
+	border-radius: 5px;
+}

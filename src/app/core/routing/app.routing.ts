@@ -6,13 +6,11 @@ import { AuthGuard } from 'src/app/guards/auth.guard';
 
 // components
 import { NotFoundComponent } from '../components/not-found/not-found.component';
-import { DashboardComponent } from '../../chesswin/chess-app/containers/dashboard/dashboard.component';
 import { SidenavComponent } from '../containers/sidenav/sidenav.component';
 
 const routes: Routes = [
 	{
 		path: '',
-		// component: DashboardComponent,
 		component: SidenavComponent,
 		children: [
 			{

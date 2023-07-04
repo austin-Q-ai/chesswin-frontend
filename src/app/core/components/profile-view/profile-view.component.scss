@@ -6,13 +6,11 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 0 32px;
 }
 
 .logo-container {
   width: 100%;
   padding: 40px 0 50px 0;
-  border-bottom: 1px solid rgb(23, 45, 63);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,8 +30,8 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 24px 0;
-  border-bottom: 1px solid rgb(23, 45, 63);
+  padding: 24px 0px 40px 0px;
+  border-bottom: 2px solid rgb(23, 45, 63);
 
   &__settings-icon-container {
     position: absolute;
