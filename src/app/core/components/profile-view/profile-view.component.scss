@@ -10,7 +10,7 @@
 
 .logo-container {
   width: 100%;
-  padding: 40px 0 50px 0;
+  padding: 40px 0 25px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,8 +30,8 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 24px 0px 40px 0px;
-  border-bottom: 2px solid rgb(23, 45, 63);
+  padding: 25px 0px;
+  border-bottom: 3px solid rgb(23, 45, 63);
 
   &__settings-icon-container {
     position: absolute;
@@ -72,4 +72,48 @@
   transition: 0.2s ease;
   -webkit-transition: 0.2s ease;
   -moz-transition: 0.2s ease;
+}
+
+.profile-user-name {
+	padding: 0 20px;
+	color: white;
+	font-family: Poppins;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-basic {
+	display: flex;
+}
+
+.profile-gold {
+	width: 100%;
+	display: flex;
+	padding: 20px 0 0 0;
+	justify-content: space-around;
+}
+
+.gold-basic {
+	padding: 8px;
+	display: flex;
+	align-items: center;
+	border-radius: 5px;
+	background: #1F394B;
+	img {
+		width: 40px;
+		height: 30px;
+	}
+	color: white;
+	font-family: Poppins;
+	font-size: 15px;
+	font-weight: 700;
+	line-height: normal;
+}
+
+.gold-number {
+	padding-left: 15px;
 }

@@ -1,20 +1,28 @@
 @import '../../../../assets/style/style.scss';
 
 .side-nav-item {
+	font-family: Poppins;
 	text-align: left;
 	align-items: center;
 	color: white;
 	font-size: 15px;
-	padding: 10px 32px;
-	border-bottom: 2px solid rgb(23, 45, 63);
+	padding: 10px 25px;
+	border-bottom: 3px solid rgb(23, 45, 63);
 	display: flex;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
 }
 
 .side-nav-item-icon {
-	width: 20px;
-	height: 20px;
+	width: 25px;
+	height: 25px;
 }
 
 .side-nav-item-text {
 	padding-left: 20px;
+}
+
+.clicked {
+	color: #F7AC65;
 }

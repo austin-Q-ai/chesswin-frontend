@@ -2,17 +2,24 @@
 
 
 .side-nav-item.button {
-	align-items: center;
-    display: flex;
+	display: flex;
     flex-direction: column;
-	margin-top: 30%;
+	margin-top: 20px;
 }
 
 .side-nav-item-button {
-	width: 40%;
+	width: 38%;
 	font-family: "aileron-bold", sans-serif;
-	font-size: 18px;
-	margin: 10px 0;
-	height: 30px;
-	border-radius: 5px;
+	font-size: 15px;
+	margin: 5px 25px;
+	padding: 13px 0;
+	border-radius: 10px;
 }
+	.log {
+		color: white;
+		background-color: #0C3142;
+	}
+	.sign {
+		color: black;
+		background: linear-gradient(180deg, #F7AC65 33.33%, #E3BC98 100%);
+	}

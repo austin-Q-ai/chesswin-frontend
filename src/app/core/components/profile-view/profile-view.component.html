@@ -2,12 +2,12 @@
 	<div class="logo-container">
 		<a routerLink="/app">
 			<img src="../../../../../../assets/images/dashboard/chess-win-logo.png" alt="chess-win-logo"
-				width="120px" />
+				width="150px" />
 		</a>
 	</div>
 
 	<div class="profile">
-		<a class="profile__settings-icon-container" matTooltip="Preferences" matTooltipPosition="below"
+		<!-- <a class="profile__settings-icon-container" matTooltip="Preferences" matTooltipPosition="below"
 			matTooltipShowDelay="500" matTooltipClass="tooltip-custom" [matMenuTriggerFor]="menu">
 			<img class="profile__settings-icon" src="../../../../../../assets/icons/settings-icon.png"
 				alt="profile-settings-icon" width="18px" height="18px" />
@@ -18,7 +18,26 @@
 
 		<img *ngIf="user && user['custom:profile_picture']; else defaultUserImage" class="profile__image"
 			[src]="user['custom:profile_picture']" alt="profile-image" width="60px" height="60px" />
-		<h3 class="heading3 profile__name">{{ user?.name }}</h3>
+		<h3 class="heading3 profile__name">{{ user?.name }}</h3> -->
+		<div class="profile-basic">
+			<a routerLink="/">
+				<img src="../../../../assets/icons/updated/avatar cover.svg" alt="avatar cover image" />
+			</a>
+			<div class="profile-user-name">
+				<div>Guest Player</div>
+				<img src="../../../../assets/images/flags/Canada.png" alt="flag image" height="40px" width="50px" />
+			</div>
+		</div>
+		<div class="profile-gold">
+			<div class="gold-basic">
+				<img src="../../../../assets/icons/updated/coin gold.svg" alt="coin gold image" />
+				<div class="gold-number">0.00</div>
+			</div>
+			<div class="gold-basic">
+				<img src="../../../../assets/icons/updated/coin icon plata.svg" alt="coin icon plata image" />
+				<div class="gold-number">966.63</div>
+			</div>
+		</div>
 	</div>
 </div>
 
