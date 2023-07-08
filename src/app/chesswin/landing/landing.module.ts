@@ -19,7 +19,6 @@ import { ContactUsComponent } from './containers/contact-us/contact-us.component
 import { AboutUsViewComponent } from './components/about-us-view/about-us-view.component';
 import { FairPlayViewComponent } from './components/fair-play-view/fair-play-view.component';
 import { FaqViewComponent } from './components/faq-view/faq-view.component';
-import { HomeViewComponent } from './components/home-view/home-view.component';
 import { HowToViewComponent } from './components/how-to-view/how-to-view.component';
 import { LandingFooterComponent } from './components/landing-footer/landing-footer.component';
 import { PrivacyPolicyViewComponent } from './components/privacy-policy-view/privacy-policy-view.component';
@@ -34,6 +33,7 @@ import { TermsAndConditionsViewComponent } from './components/terms-and-conditio
 import { TermsAndConditionsComponent } from './containers/terms-and-conditions/terms-and-conditions.component';
 import { RefundPolicyViewComponent } from './components/refund-policy-view/refund-policy-view.component';
 import { RefundPolicyComponent } from './containers/refund-policy/refund-policy.component';
+import { LoginComponent } from './containers/login/login.component';
 
 @NgModule({
 	imports: [CommonModule, LandingRouting, ReactiveFormsModule],
@@ -49,7 +49,6 @@ import { RefundPolicyComponent } from './containers/refund-policy/refund-policy.
 		AboutUsViewComponent,
 		FairPlayViewComponent,
 		FaqViewComponent,
-		HomeViewComponent,
 		HowToViewComponent,
 		LandingFooterComponent,
 		PrivacyPolicyViewComponent,
@@ -63,6 +62,7 @@ import { RefundPolicyComponent } from './containers/refund-policy/refund-policy.
 		TermsAndConditionsComponent,
 		RefundPolicyViewComponent,
 		RefundPolicyComponent,
+		LoginComponent,
 	],
 	entryComponents: [PackagePaymentComponent]
 })

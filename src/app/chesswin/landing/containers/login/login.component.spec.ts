@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
-import { HomeViewComponent } from './home-view.component';
+import { LoginComponent } from './login.component';
 
-describe('HomeViewComponent', () => {
-	let component: HomeViewComponent;
-	let fixture: ComponentFixture<HomeViewComponent>;
+describe('LoginComponent', () => {
+	let component: LoginComponent;
+	let fixture: ComponentFixture<LoginComponent>;
 
 	beforeEach(waitForAsync(() => {
 		TestBed.configureTestingModule({
-			declarations: [ HomeViewComponent ]
+			declarations: [ LoginComponent ]
 		})
 			.compileComponents();
 	}));
 
 	beforeEach(() => {
-		fixture = TestBed.createComponent(HomeViewComponent);
+		fixture = TestBed.createComponent(LoginComponent);
 		component = fixture.componentInstance;
 		fixture.detectChanges();
 	});

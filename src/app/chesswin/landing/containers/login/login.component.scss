@@ -67,6 +67,36 @@
 						margin-top: 32px;
 					}
 
+					::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+						color: #ecbe7d!important;
+						background-color: #676565;
+						// opacity: 1!important;
+					}
+
+					::ng-deep .mat-input-element {
+						caret-color: #ecbe7d!important;
+						color: white;
+						padding-left: 10px;
+					}
+
+					::ng-deep .mat-input-element::placeholder {
+						color: #D2D2D2!important;
+					}
+
+					::ng-deep .mat-icon {
+						color: white!important;
+						background-color: #676565;
+						cursor: pointer;
+					}
+
+					::ng-deep .mat-form-field-infix {
+						padding: 10px 0 15px 0;
+					}
+
+					::ng-deep .mat-form-field-prefix {
+						top: 0.4em !important;
+					}
+
 					.chess-input {
 						background-color: transparent;
 						border: 1px solid #ecbe7d;
@@ -92,6 +122,14 @@
 						font-size: 16px;
 						line-height: 22px;
 						letter-spacing: normal;
+						border-radius: 10px;
+						border: 2px solid #F7AC65;
+						background: #F7AC65;
+					}
+
+					.guest-player {
+						background-color: #052534;
+						color: #F7AC65;
 					}
 				}
 

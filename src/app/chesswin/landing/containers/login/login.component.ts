@@ -13,11 +13,12 @@ import { FacadeService } from 'facade-service';
 import { getErrorFromCode } from '../../../../common/functions/auth-errors';
 
 @Component({
-	selector: 'app-home-view',
-	templateUrl: './home-view.component.html',
-	styleUrls: ['./home-view.component.scss']
+	selector: 'app-login',
+	templateUrl: './login.component.html',
+	styleUrls: ['./login.component.scss']
 })
-export class HomeViewComponent implements OnInit, OnDestroy {
+export class LoginComponent implements OnInit, OnDestroy {
+	hide=true;
 	requesting: boolean;
 	serverError: string;
 

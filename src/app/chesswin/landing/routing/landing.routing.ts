@@ -8,7 +8,7 @@ import { FaqComponent } from '../containers/faq/faq.component';
 import { HowToComponent } from '../containers/how-to/how-to.component';
 import { PrivacyPolicyComponent } from '../containers/privacy-policy/privacy-policy.component';
 import { HomeGuard } from 'src/app/guards/home.guard';
-import { HomeViewComponent } from '../components/home-view/home-view.component';
+import { LoginComponent } from '../containers/login/login.component';
 import { ContactUsComponent } from '../containers/contact-us/contact-us.component';
 import { PackagesComponent } from '../containers/packages/packages.component';
 import { TermsAndConditionsComponent } from '../containers/terms-and-conditions/terms-and-conditions.component';
@@ -16,8 +16,8 @@ import { RefundPolicyComponent } from '../containers/refund-policy/refund-policy
 
 const landingRoutes: Routes = [
 	{
-		path: '',
-		component: HomeViewComponent,
+		path: 'login',
+		component: LoginComponent,
 		canActivate: [HomeGuard]
 	},
 	{

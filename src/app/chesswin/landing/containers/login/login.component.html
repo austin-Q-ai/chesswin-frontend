@@ -11,30 +11,39 @@
 			<div class="login-area">
 				<form (ngSubmit)="emitLoginForm()" [formGroup]="loginForm" class="login-form" novalidate>
 					<div class="form-group">
-						<span class="label">E-Mail Address</span>
-						<input autocomplete="email" name="email" style="display: none" type="text" />
-						<input class="chess-input" formControlName="email" name="email" placeholder="chessf@gmail.com"
-							tabindex="1" type="email" />
-						<span *ngIf="submitted && emailError" class="error-message">Please enter a valid email
-							address!</span>
+						<mat-form-field appearance="outline">
+							<mat-icon matPrefix>email</mat-icon>
+							<input matInput placeholder="Email address">
+						</mat-form-field>
 					</div>
 
 					<div class="form-group">
-						<span class="label">Password</span>
-						<input autocomplete="new-password" name="password" style="display: none" type="password" />
-						<input class="chess-input" formControlName="password" name="password" placeholder="Password"
-							tabindex="2" type="password" />
-						<span *ngIf="submitted && passwordError" class="error-message">Please enter password!</span>
+						<mat-form-field appearance="outline">
+							<mat-icon matPrefix>lock</mat-icon>
+							<input matInput [type]="hide ? 'password' : 'text'" placeholder="Password">
+							<button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+								[attr.aria-pressed]="hide">
+								<mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+							</button>
+						</mat-form-field>
+						<!-- <span *ngIf="submitted && passwordError" class="error-message">Please enter password!</span> -->
 					</div>
 
-					<span class="server-error">{{ serverError }}</span>
+					<!-- <span class="server-error">{{ serverError }}</span> -->
 
 					<button [disabled]="requesting" class="button button-sand-gradient" tabindex="3" type="submit">
-						<p *ngIf="!requesting; else loginLoading">Log in</p>
+						<p *ngIf="!requesting; else loginLoading">LOG IN</p>
+					</button>
+					<button [disabled]="requesting" class="button button-sand-gradient" tabindex="3" type="submit">
+						<p *ngIf="!requesting; else loginLoading">CREATE ACCOUNT</p>
+					</button>
+					<button [disabled]="requesting" class="button button-sand-gradient guest-player" tabindex="3"
+						type="submit">
+						<p *ngIf="!requesting; else loginLoading">GUEST PLAYER</p>
 					</button>
 				</form>
 
-				<div class="download-app-area">
+				<!-- <div class="download-app-area">
 					<div class="content-centered">
 						<p class="paragraph text-apricot text-uppercase">
 							DOWNLOAD THE APP AND SIGN IN
@@ -52,7 +61,7 @@
 								src="../../../../../assets/images/get-it-on-google-play.png" />
 						</a>
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 
