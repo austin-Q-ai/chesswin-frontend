@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
 	styleUrls: ['./sidenav-item.component.scss']
 })
 export class SidenavItemComponent implements OnInit {
-	@Input() iconUrl: String;
+	@Input() icon: String;
 	@Input() itemText: String;
 
 	constructor() { }

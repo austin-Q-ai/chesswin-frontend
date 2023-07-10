@@ -9,7 +9,7 @@
 
 			<app-profile-view></app-profile-view>
 			<div *ngFor="let item of items">
-				<app-sidenav-item [iconUrl]="item.iconURL" [itemText]="item.itemText"></app-sidenav-item>
+				<app-sidenav-item [icon]="item.icon" [itemText]="item.itemText"></app-sidenav-item>
 			</div>
 			<app-sidenav-log-button></app-sidenav-log-button>
 		</mat-sidenav>
