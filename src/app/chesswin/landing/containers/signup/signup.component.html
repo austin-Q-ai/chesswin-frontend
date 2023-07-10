@@ -1,0 +1,63 @@
+<div class="gradient-background">
+	<div class="section-block presentation-section">
+		<div class="wrapper presentation-wrapper">
+			<img alt="chess-win-presentation-image" class="presentation-image"
+				src="../../../../../assets/images/presentation-image.png" />
+			<div class="content-centered">
+				<h1 class="main-heading text-gradient">
+					{{ languageLabels?.mainTitle }}
+				</h1>
+			</div>
+			<div class="login-area">
+				<form (ngSubmit)="emitSignupForm()" [formGroup]="signupForm" class="login-form" novalidate>
+					<div class="singup-name-field">
+						<div class="form-group">
+							<mat-form-field appearance="outline">
+								<input matInput placeholder="First Name">
+							</mat-form-field>
+						</div>
+						<div class="form-group">
+							<mat-form-field appearance="outline">
+								<input matInput placeholder="Last Name">
+							</mat-form-field>
+						</div>
+					</div>
+					<div class="form-group">
+						<mat-form-field appearance="outline">
+							<mat-icon matPrefix>person</mat-icon>
+							<input matInput placeholder="Nickname">
+						</mat-form-field>
+					</div>
+					<div class="form-group">
+						<mat-form-field appearance="outline">
+							<mat-icon matPrefix>email</mat-icon>
+							<input matInput placeholder="Email address">
+						</mat-form-field>
+					</div>
+
+					<div class="form-group">
+						<mat-form-field appearance="outline">
+							<mat-icon matPrefix>lock</mat-icon>
+							<input matInput [type]="hide ? 'password' : 'text'" placeholder="Password">
+							<button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+								[attr.aria-pressed]="hide">
+								<mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+							</button>
+						</mat-form-field>
+					</div>
+
+					<button [disabled]="requesting" class="button button-sand-gradient" tabindex="3" type="submit">
+						<p *ngIf="!requesting; else loginLoading">CREATE ACCOUNT</p>
+					</button>
+				</form>
+
+			</div>
+		</div>
+
+
+	</div>
+</div>
+
+<ng-template #loginLoading>
+	<app-loading [size]="25"></app-loading>
+</ng-template>

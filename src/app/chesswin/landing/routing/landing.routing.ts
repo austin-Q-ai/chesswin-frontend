@@ -13,11 +13,17 @@ import { ContactUsComponent } from '../containers/contact-us/contact-us.componen
 import { PackagesComponent } from '../containers/packages/packages.component';
 import { TermsAndConditionsComponent } from '../containers/terms-and-conditions/terms-and-conditions.component';
 import { RefundPolicyComponent } from '../containers/refund-policy/refund-policy.component';
+import { SignupComponent } from '../containers/signup/signup.component';
 
 const landingRoutes: Routes = [
 	{
 		path: 'login',
 		component: LoginComponent,
+		canActivate: [HomeGuard]
+	},
+	{
+		path: 'signup'	,
+		component: SignupComponent,
 		canActivate: [HomeGuard]
 	},
 	{
