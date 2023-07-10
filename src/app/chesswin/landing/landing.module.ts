@@ -10,7 +10,6 @@ import { AboutUsComponent } from './containers/about-us/about-us.component';
 import { FairPlayComponent } from './containers/fair-play/fair-play.component';
 import { FaqComponent } from './containers/faq/faq.component';
 import { HowToComponent } from './containers/how-to/how-to.component';
-import { LandingComponent } from './containers/landing/landing.component';
 import { PackagesComponent } from './containers/packages/packages.component';
 import { PrivacyPolicyComponent } from './containers/privacy-policy/privacy-policy.component';
 import { ContactUsComponent } from './containers/contact-us/contact-us.component';
@@ -43,7 +42,6 @@ import { LoginComponent } from './containers/login/login.component';
 		FairPlayComponent,
 		FaqComponent,
 		HowToComponent,
-		LandingComponent,
 		PrivacyPolicyComponent,
 		// components
 		AboutUsViewComponent,
