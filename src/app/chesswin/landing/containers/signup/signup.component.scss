@@ -237,3 +237,25 @@
 .singup-name-field .form-group {
 	width: 45% !important;
 }
+
+.image-upload {
+	width: 150px;
+	height: 150px;
+	align-self: center;
+	background-color: #676565;
+	border: 0px transparent;
+	border-radius: 5px;
+	margin-bottom: 21.5px;
+	align-items: center;
+	color: #D2D2D2;
+	font-size: 20px;
+}
+
+.image-upload-icon {
+	height: 118px;
+	padding: 25px 35px 3px;
+}
+
+.image-upload-text {
+	padding-left: 13px;
+}

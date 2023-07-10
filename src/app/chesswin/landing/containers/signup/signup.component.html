@@ -10,6 +10,13 @@
 			</div>
 			<div class="login-area">
 				<form (ngSubmit)="emitSignupForm()" [formGroup]="signupForm" class="login-form" novalidate>
+					<div class="form-group">
+						<div class="image-upload">
+							<img src="../../../../../assets/icons/updated/upload photo icon.svg"
+								class="image-upload-icon">
+							<p class="image-upload-text">Upload Photo</p>
+						</div>
+					</div>
 					<div class="singup-name-field">
 						<div class="form-group">
 							<mat-form-field appearance="outline">
