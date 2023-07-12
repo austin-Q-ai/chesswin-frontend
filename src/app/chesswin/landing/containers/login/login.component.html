@@ -3,11 +3,7 @@
 		<div class="wrapper presentation-wrapper">
 			<img alt="chess-win-presentation-image" class="presentation-image"
 				src="../../../../../assets/images/presentation-image.png" />
-			<div class="content-centered">
-				<h1 class="main-heading text-gradient">
-					{{ languageLabels?.mainTitle }}
-				</h1>
-			</div>
+			<app-welcome></app-welcome>
 			<div class="login-area">
 				<form (ngSubmit)="emitLoginForm()" [formGroup]="loginForm" class="login-form" novalidate>
 					<div class="form-group">
