@@ -34,21 +34,26 @@
 				color: $sand;
 			}
 
-			.login-area {
+			.signup-area {
 				display: flex;
 				flex-direction: column;
-				max-width: 340px;
+				max-width: 450px;
 				margin-top: 64px;
+
 
 				@include mq(992px) {
 					margin: 0 auto !important;
 					padding-top: 30px;
 				}
 
-				.login-form {
+				.signup-form {
 					display: flex;
 					flex-direction: column;
 					position: relative;
+					border-radius: 10px;
+					border: 2px solid #F7AC65;
+					background: #071522;
+					padding: 5% 8%;
 
 					.form-group {
 						width: 100%;
@@ -79,6 +84,12 @@
 						padding-left: 10px;
 					}
 
+					.country-form {
+						::ng-deep .mat-input-element {
+							padding-left: 45px;
+						}
+					}
+
 					::ng-deep .mat-input-element::placeholder {
 						color: #D2D2D2!important;
 					}
@@ -87,6 +98,8 @@
 						color: white!important;
 						background-color: #676565;
 						cursor: pointer;
+						display: flex;
+						align-items: center;
 					}
 
 					::ng-deep .mat-form-field-infix {
@@ -130,28 +143,6 @@
 					.guest-player {
 						background-color: #052534;
 						color: #F7AC65;
-					}
-				}
-
-				.download-app-area {
-					margin-top: 48px;
-
-					.paragraph {
-						font-family: "aileron-regular", sans-serif;
-					}
-
-					.action-buttons {
-						display: flex;
-						justify-content: space-between;
-						margin-top: 24px;
-
-						a {
-							max-width: 48%;
-
-							img {
-								width: 100%;
-							}
-						}
 					}
 				}
 			}
@@ -258,4 +249,12 @@
 
 .image-upload-text {
 	padding-left: 13px;
+}
+
+.country-option-row {
+	display: flex !important;
+	align-items: center !important;
+}
+.country-option-text {
+	margin-left: 10px;
 }

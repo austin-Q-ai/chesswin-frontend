@@ -8,8 +8,8 @@
 					{{ languageLabels?.mainTitle }}
 				</h1>
 			</div>
-			<div class="login-area">
-				<form (ngSubmit)="emitSignupForm()" [formGroup]="signupForm" class="login-form" novalidate>
+			<div class="signup-area">
+				<form (ngSubmit)="emitSignupForm()" [formGroup]="signupForm" class="signup-form" novalidate>
 					<div class="form-group">
 						<div class="image-upload">
 							<img src="../../../../../assets/icons/updated/upload photo icon.svg"
@@ -53,11 +53,34 @@
 						</mat-form-field>
 					</div>
 
+					<div class="form-group">
+						<mat-form-field appearance="outline" class="country-form">
+							<mat-icon matPrefix>location_on
+								<img *ngIf="selectedCountry && countries.includes(selectedCountry)"
+									src="../../../../../assets/images/flags/{{selectedCountry}}.png" width="36"
+									height="36" style="margin-left: 5px;">
+							</mat-icon>
+							<input matInput [matAutocomplete]="auto" [formControl]="countryControl"
+								[(ngModel)]="selectedCountry" placeholder="Select a country">
+							<mat-autocomplete #auto="matAutocomplete">
+								<mat-option *ngFor="let country of filteredCountries | async" [value]="country"
+									(onSelectionChange)="onSelecteCountry">
+									<div class="country-option-row">
+										<img src="../../../../../assets/images/flags/{{country}}.png" width="24"
+											height="24">
+										<span class="country-option-text">{{ country }}</span>
+									</div>
+								</mat-option>
+							</mat-autocomplete>
+						</mat-form-field>
+					</div>
+
 					<button [disabled]="requesting" class="button button-sand-gradient" tabindex="3" type="submit">
 						<p *ngIf="!requesting; else loginLoading">CREATE ACCOUNT</p>
 					</button>
-				</form>
 
+
+				</form>
 			</div>
 		</div>
 
