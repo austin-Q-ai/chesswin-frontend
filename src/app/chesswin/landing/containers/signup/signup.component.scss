@@ -106,6 +106,10 @@
 						padding: 10px 0 15px 0;
 					}
 
+					::ng-deep .mat-checkbox .mat-checkbox-frame {
+						border-color: $sand !important;
+					}
+
 					::ng-deep .mat-form-field-prefix {
 						top: 0.4em !important;
 					}
@@ -257,4 +261,19 @@
 }
 .country-option-text {
 	margin-left: 10px;
+}
+
+.accept-form {
+	color: white;
+	font-family: "Poppins";
+}
+
+.red {
+	color: red;
+}
+
+.already {
+	font-family: "Poppins";
+	align-self: center;
+	margin-top: 15px;
 }

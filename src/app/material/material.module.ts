@@ -13,6 +13,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTableModule } from '@angular/material/table';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
 	imports: [
@@ -27,7 +28,8 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 		MatSnackBarModule,
 		MatTableModule,
 		MatTooltipModule,
-		MatAutocompleteModule
+		MatAutocompleteModule,
+		MatCheckboxModule
 	],
 	exports: [
 		MatDialogModule,
@@ -41,7 +43,8 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 		MatSnackBarModule,
 		MatTableModule,
 		MatTooltipModule,
-		MatAutocompleteModule
+		MatAutocompleteModule,
+		MatCheckboxModule
 	]
 })
 export class MaterialModule {}
