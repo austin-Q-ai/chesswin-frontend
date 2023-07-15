@@ -24,6 +24,8 @@
 						</mat-form-field>
 					</div>
 
+					<!-- <p class="verify-link">Incorrect Code, please try again</p> -->
+
 					<button [disabled]="requesting" class="button button-sand-gradient" tabindex="3" type="submit">
 						<p *ngIf="!requesting; else loginLoading">Confirm Account</p>
 					</button>
@@ -32,8 +34,16 @@
 					<a class="verify-link">Resend Code</a>
 
 				</div>
-				<div class=" verify-form" *ngIf="verified">
-
+				<div class="verify-form" *ngIf="verified">
+					<div class="confirmed-label">
+						<p>Welcome! Account Confirmed</p>
+						<img src="../../../../../assets/icons/updated/Green-Check-PNG-Image-HD 1.svg"
+							style="margin: 20px 0 10px;" width="180" height="180">
+						<P class="login-request">Please log in with your credentials now</P>
+					</div>
+					<button [disabled]="requesting" class="button button-sand-gradient" tabindex="3" type="submit">
+						<p *ngIf="!requesting; else loginLoading">Log In</p>
+					</button>
 				</div>
 			</div>
 		</div>
