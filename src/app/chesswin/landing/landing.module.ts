@@ -35,6 +35,7 @@ import { RefundPolicyViewComponent } from './components/refund-policy-view/refun
 import { RefundPolicyComponent } from './containers/refund-policy/refund-policy.component';
 import { LoginComponent } from './containers/login/login.component';
 import { SignupComponent } from './containers/signup/signup.component';
+import { VerifyComponent } from './containers/verify/verify.component';
 
 @NgModule({
 	imports: [CommonModule, LandingRouting, ReactiveFormsModule],
@@ -65,6 +66,7 @@ import { SignupComponent } from './containers/signup/signup.component';
 		RefundPolicyComponent,
 		LoginComponent,
 		SignupComponent,
+		VerifyComponent,
 	],
 	entryComponents: [PackagePaymentComponent]
 })
