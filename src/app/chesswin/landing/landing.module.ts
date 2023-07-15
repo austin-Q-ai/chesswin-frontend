@@ -25,6 +25,7 @@ import { SuggestedVideosComponent } from './components/how-to-view/suggested-vid
 import { VideoPlayerComponent } from './components/how-to-view/video-player/video-player.component';
 import { ContactUsViewComponent } from './components/contact-us-view/contact-us-view.component';
 import { PackagesViewComponent } from './components/packages-view/packages-view.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
 
 // dialogs
 import { PackagePaymentComponent } from './components/dialogs/package-payment/package-payment.component';
@@ -54,6 +55,7 @@ import { LoginComponent } from './containers/login/login.component';
 		VideoPlayerComponent,
 		ContactUsComponent,
 		ContactUsViewComponent,
+		WelcomeComponent,
 		// dialogs
 		PackagePaymentComponent,
 		TermsAndConditionsViewComponent,

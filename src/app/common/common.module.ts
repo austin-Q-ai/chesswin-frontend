@@ -25,7 +25,6 @@ import { LoadingComponent } from './components/loading/loading.component';
 import { OfferDrawGameComponent } from './components/dialogs/offer-draw-game/offer-draw-game.component';
 import { PaginatorComponent } from './components/paginator/paginator.component';
 import { WithdrawDialogComponent } from './components/dialogs/withdraw-dialog/withdraw-dialog.component';
-import { WelcomeComponent } from './components/welcome/welcome.component';
 
 @NgModule({
 	imports: [
@@ -53,8 +52,7 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
 		GameAbandonedComponent,
 		GameEndComponent,
 		OfferDrawGameComponent,
-		WithdrawDialogComponent,
-		WelcomeComponent
+		WithdrawDialogComponent
 	],
 	exports: [
 		// modules
@@ -65,7 +63,6 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
 		HeaderComponent,
 		LoadingComponent,
 		PaginatorComponent,
-		WelcomeComponent,
 		// directives
 		AccordionDirective,
 		// pipes
