@@ -1,0 +1,100 @@
+<div class="gradient-background">
+	<div class="section-block presentation-section">
+		<div class="wrapper presentation-wrapper">
+			<img alt="chess-win-presentation-image" class="presentation-image"
+				src="../../../../../assets/images/presentation-image.png" />
+			<div class="content-centered">
+				<h1 class="main-heading text-gradient">
+					{{ languageLabels?.mainTitle }}
+				</h1>
+			</div>
+			<div class="signup-area">
+				<form (ngSubmit)="emitSignupForm()" [formGroup]="signupForm" class="signup-form" novalidate>
+					<div class="form-group">
+						<div class="image-upload">
+							<img src="../../../../../assets/icons/updated/upload photo icon.svg"
+								class="image-upload-icon">
+							<p class="image-upload-text">Upload Photo</p>
+						</div>
+					</div>
+					<div class="singup-name-field">
+						<div class="form-group">
+							<mat-form-field appearance="outline">
+								<input matInput placeholder="First Name">
+							</mat-form-field>
+						</div>
+						<div class="form-group">
+							<mat-form-field appearance="outline">
+								<input matInput placeholder="Last Name">
+							</mat-form-field>
+						</div>
+					</div>
+					<div class="form-group">
+						<mat-form-field appearance="outline">
+							<mat-icon matPrefix>person</mat-icon>
+							<input matInput placeholder="Nickname">
+						</mat-form-field>
+					</div>
+					<div class="form-group">
+						<mat-form-field appearance="outline">
+							<mat-icon matPrefix>email</mat-icon>
+							<input matInput placeholder="Email address">
+						</mat-form-field>
+					</div>
+
+					<div class="form-group">
+						<mat-form-field appearance="outline">
+							<mat-icon matPrefix>lock</mat-icon>
+							<input matInput [type]="hide ? 'password' : 'text'" placeholder="Password">
+							<button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+								[attr.aria-pressed]="hide">
+								<mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+							</button>
+						</mat-form-field>
+					</div>
+
+					<div class="form-group">
+						<mat-form-field appearance="outline" class="country-form">
+							<mat-icon matPrefix>location_on
+								<img *ngIf="selectedCountry && countries.includes(selectedCountry)"
+									src="../../../../../assets/images/flags/{{selectedCountry}}.png" width="36"
+									height="36" style="margin-left: 5px;">
+							</mat-icon>
+							<input matInput [matAutocomplete]="auto" [formControl]="countryControl"
+								[(ngModel)]="selectedCountry" placeholder="Select a country">
+							<mat-autocomplete #auto="matAutocomplete">
+								<mat-option *ngFor="let country of filteredCountries | async" [value]="country"
+									(onSelectionChange)="onSelecteCountry">
+									<div class="country-option-row">
+										<img src="../../../../../assets/images/flags/{{country}}.png" width="24"
+											height="24">
+										<span class="country-option-text">{{ country }}</span>
+									</div>
+								</mat-option>
+							</mat-autocomplete>
+						</mat-form-field>
+					</div>
+
+					<div class="form-group">
+						<mat-checkbox class="accept-form" color="yellow">
+							I have accepted the <a href="/terms-and-conditions" class="red">terms and conditions</a>
+						</mat-checkbox>
+					</div>
+
+					<button [disabled]="requesting" class="button button-sand-gradient" tabindex="3" type="submit">
+						<p *ngIf="!requesting; else loginLoading">CREATE ACCOUNT</p>
+					</button>
+
+					<a href="/login" class="red already">Already have an account?</a>
+
+				</form>
+			</div>
+		</div>
+
+
+	</div>
+</div>
+
+<ng-template #loginLoading>
+	<app-loading [size]="25"></app-loading>
+</ng-template>
