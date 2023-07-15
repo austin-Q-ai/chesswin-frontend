@@ -13,6 +13,7 @@ import { ContactUsComponent } from '../containers/contact-us/contact-us.componen
 import { PackagesComponent } from '../containers/packages/packages.component';
 import { TermsAndConditionsComponent } from '../containers/terms-and-conditions/terms-and-conditions.component';
 import { RefundPolicyComponent } from '../containers/refund-policy/refund-policy.component';
+import { VerifyComponent } from '../containers/verify/verify.component';
 
 const landingRoutes: Routes = [
 	{
@@ -58,6 +59,11 @@ const landingRoutes: Routes = [
 	{
 		path: 'refund-policy',
 		component: RefundPolicyComponent,
+		canActivate: [HomeGuard]
+	},
+	{
+		path: 'verify',
+		component: VerifyComponent,
 		canActivate: [HomeGuard]
 	}
 	// {

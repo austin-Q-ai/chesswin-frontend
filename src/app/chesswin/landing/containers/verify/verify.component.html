@@ -1,0 +1,47 @@
+<div class="gradient-background">
+	<div class="section-block presentation-section">
+		<div class="wrapper presentation-wrapper">
+			<img alt="chess-win-presentation-image" class="presentation-image"
+				src="../../../../../assets/images/presentation-image.png" />
+			<div class="content-centered">
+				<h1 class="main-heading text-gradient">
+					{{ languageLabels?.mainTitle }}
+				</h1>
+			</div>
+			<div class="verify-area">
+				<div class="verify-form" *ngIf="!verified">
+					<div class="confirm-label">
+						<!-- <p>Verification code is successfully resended!</p> -->
+						<p>Please confirm your account</p>
+						<img src="../../../../../assets/icons/updated/timer icon.svg" style="margin: 20px 0 10px;"
+							width="30" height="30">
+						<P class="font-sand">10:00</P>
+					</div>
+					<div class="form-group verify-code">
+						<mat-form-field appearance="outline" *ngFor=" let i of [0,1,2,3,4]" style="width: 17%;">
+							<input matInput type="number" [pattern]="'[0-9]'" maxlength="1"
+								style="height: 60px;font-size: 40px;" class="font-sand">
+						</mat-form-field>
+					</div>
+
+					<button [disabled]="requesting" class="button button-sand-gradient" tabindex="3" type="submit">
+						<p *ngIf="!requesting; else loginLoading">Confirm Account</p>
+					</button>
+
+					<a href="/signup" class="verify-link">Change E-mail</a>
+					<a class="verify-link">Resend Code</a>
+
+				</div>
+				<div class=" verify-form" *ngIf="verified">
+
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+</div>
+
+<ng-template #loginLoading>
+	<app-loading [size]="25"></app-loading>
+</ng-template>
