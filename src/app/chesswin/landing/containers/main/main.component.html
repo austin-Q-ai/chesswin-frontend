@@ -1,0 +1,18 @@
+<div class="gradient-background">
+	<div class="section-block presentation-section">
+		<div class="wrapper presentation-wrapper">
+			<div class="main-area">
+				<app-welcome></app-welcome>
+				<div *ngFor="let item of items">
+					<app-main-item [icon]="item.icon" [itemText]="item.itemText" [image]="item.img"
+						[background]="item.background"></app-main-item>
+				</div>
+			</div>
+		</div>
+
+		<div>
+			<router-outlet></router-outlet>
+		</div>
+
+	</div>
+</div>
