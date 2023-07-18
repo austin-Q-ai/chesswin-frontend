@@ -15,6 +15,7 @@ import { TermsAndConditionsComponent } from '../containers/terms-and-conditions/
 import { RefundPolicyComponent } from '../containers/refund-policy/refund-policy.component';
 import { SignupComponent } from '../containers/signup/signup.component';
 import { VerifyComponent } from '../containers/verify/verify.component';
+import { HomeComponent } from '../containers/home/home.component';
 
 const landingRoutes: Routes = [
 	{
@@ -53,8 +54,8 @@ const landingRoutes: Routes = [
 		canActivate: [HomeGuard]
 	},
 	{
-		path: 'packages',
-		redirectTo: '/app',
+		path: '',
+		redirectTo: '/home',
 		pathMatch: 'full'
 	},
 	{
@@ -70,6 +71,11 @@ const landingRoutes: Routes = [
 	{
 		path: 'verify',
 		component: VerifyComponent,
+		canActivate: [HomeGuard]
+	},
+	{
+		path: 'home',
+		component: HomeComponent,
 		canActivate: [HomeGuard]
 	}
 	// {
