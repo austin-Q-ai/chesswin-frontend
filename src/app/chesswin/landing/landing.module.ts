@@ -39,6 +39,7 @@ import { VerifyComponent } from './containers/verify/verify.component';
 import { MainMenuComponent } from './components/main-menu/main-menu.component';
 import { MainMenuItemComponent } from './components/main-menu-item/main-menu-item.component';
 import { MainTemplateComponent } from './containers/main-template/main-template.component';
+import { HomeComponent } from './containers/home/home.component';
 
 @NgModule({
 	imports: [CommonModule, LandingRouting, ReactiveFormsModule],
@@ -73,6 +74,7 @@ import { MainTemplateComponent } from './containers/main-template/main-template.
 		MainMenuComponent,
 		MainMenuItemComponent,
 		MainTemplateComponent,
+		HomeComponent,
 	],
 	entryComponents: [PackagePaymentComponent]
 })

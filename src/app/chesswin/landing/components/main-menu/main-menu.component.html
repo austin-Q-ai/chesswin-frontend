@@ -1,4 +1,6 @@
-<div *ngFor="let item of items">
-	<app-main-menu-item [icon]="item.icon" [itemText]="item.itemText" [image]="item.img"
-		[background]="item.background"></app-main-menu-item>
+<div style="margin-top: 80px;">
+	<div *ngFor="let item of items">
+		<app-main-menu-item [icon]="item.icon" [itemText]="item.itemText" [image]="item.img"
+			[background]="item.background"></app-main-menu-item>
+	</div>
 </div>
