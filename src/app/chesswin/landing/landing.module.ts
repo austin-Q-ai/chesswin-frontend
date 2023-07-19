@@ -38,6 +38,7 @@ import { SignupComponent } from './containers/signup/signup.component';
 import { VerifyComponent } from './containers/verify/verify.component';
 import { MainMenuComponent } from './components/main-menu/main-menu.component';
 import { MainMenuItemComponent } from './components/main-menu-item/main-menu-item.component';
+import { MainTemplateComponent } from './containers/main-template/main-template.component';
 
 @NgModule({
 	imports: [CommonModule, LandingRouting, ReactiveFormsModule],
@@ -71,6 +72,7 @@ import { MainMenuItemComponent } from './components/main-menu-item/main-menu-ite
 		VerifyComponent,
 		MainMenuComponent,
 		MainMenuItemComponent,
+		MainTemplateComponent,
 	],
 	entryComponents: [PackagePaymentComponent]
 })

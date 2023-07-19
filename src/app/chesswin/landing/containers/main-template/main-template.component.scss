@@ -1,0 +1,29 @@
+@import '../../../../../assets/style/style.scss';
+
+.gradient-background {
+	background-image: linear-gradient($dark-indigo-two, $midnight-two);
+
+	.presentation-section {
+		position: relative;
+		background-image: url(../../../../../assets/images/chess-background.png);
+		background-position: top left;
+		background-repeat: no-repeat;
+		background-size: 100% 46%;
+
+		.presentation-wrapper {
+			padding: 42px 0 55px;
+
+			.main-area {
+				display: flex;
+				flex-direction: column;
+				max-width: 340px;
+				margin-top: 64px;
+
+				@include mq(992px) {
+					margin: 0 auto !important;
+					padding-top: 30px;
+				}
+			}
+		}
+	}
+}

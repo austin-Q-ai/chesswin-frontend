@@ -1,11 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
+// services
+import { FacadeService } from 'facade-service';
+
 @Component({
-	selector: 'app-main-menu',
-	templateUrl: './main-menu.component.html',
-	styleUrls: ['./main-menu.component.scss']
+	selector: 'app-main-template',
+	templateUrl: './main-template.component.html',
+	styleUrls: ['./main-template.component.scss']
 })
-export class MainMenuComponent implements OnInit {
+export class MainTemplateComponent implements OnInit {
+
+	languageLabels;
 
 	items = [
 		{ 'icon':'icon 2 coins', 'itemText': 'Play with ChessCoin', 'img': 'horse', 'background': 'gold'},
@@ -15,7 +20,12 @@ export class MainMenuComponent implements OnInit {
 	]
 
 	constructor(
+		private facadeService: FacadeService
 	) {}
 
-	ngOnInit(): void {}
+	ngOnInit(): void {
+		this.facadeService
+			.getLanguageLabels()
+			.subscribe(data => (this.languageLabels = data));
+	}
 }
