@@ -1,5 +1,10 @@
 <div class="presentation-playlist">
-	<p>Remember 10 ChessCoin is 1.00$</p>
+	<p class="header">Remember 10 ChessCoin is 1.00$</p>
+	<div class="playlist-menu">
+		<img src="../../../../../assets/icons/updated/timer icon.png" width="32" height="38">
+		<p>10 minutes</p>
+		<img src="../../../../../assets/icons/updated/right arrow.png" width="37" height="42">
+	</div>
 	<div *ngFor="let item of [1,2,3,4,5]">
 		<app-playlist-item [index]="item"></app-playlist-item>
 	</div>

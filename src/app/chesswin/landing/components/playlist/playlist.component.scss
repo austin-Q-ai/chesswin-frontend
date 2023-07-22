@@ -2,17 +2,30 @@
 
 .presentation-playlist {
 	width: 425px;
+	font-family: Poppins;
 
-	p {
+	p.header {
 		color: #01dc17;
-		font-family: Poppins;
 		font-size: 25px;
 		font-style: normal;
 		font-weight: 600;
 		line-height: normal;
 	}
 
+	p {
+		color: white;
+		font-size: 20px;
+		font-weight: 400;
+	}
+
 	.playlist-menu {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 60px;
+		border-radius: 10px;
+		background: #1f394b;
 		padding: 11px 87px;
+		margin: 15px 0 25px;
 	}
 }
