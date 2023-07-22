@@ -29,6 +29,18 @@
 
 		.presentation-wrapper {
 			padding: 42px 0 55px;
+
+			.main-area {
+				display: flex;
+				flex-direction: column;
+				max-width: 340px;
+				margin-top: 64px;
+
+				@include mq(992px) {
+					margin: 0 auto !important;
+					padding-top: 30px;
+				}
+			}
 		}
 
 		.are-you-ready-wrapper {

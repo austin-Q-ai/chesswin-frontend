@@ -40,6 +40,9 @@ import { MainMenuComponent } from './components/main-menu/main-menu.component';
 import { MainMenuItemComponent } from './components/main-menu-item/main-menu-item.component';
 import { MainTemplateComponent } from './containers/main-template/main-template.component';
 import { HomeComponent } from './containers/home/home.component';
+import { PlaylistComponent } from './components/playlist/playlist.component';
+import { PlaylistItemComponent } from './components/playlist-item/playlist-item.component';
+import { PlayChesscoinComponent } from './containers/play-chesscoin/play-chesscoin.component';
 
 @NgModule({
 	imports: [CommonModule, LandingRouting, ReactiveFormsModule],
@@ -75,6 +78,9 @@ import { HomeComponent } from './containers/home/home.component';
 		MainMenuItemComponent,
 		MainTemplateComponent,
 		HomeComponent,
+		PlaylistComponent,
+		PlaylistItemComponent,
+		PlayChesscoinComponent,
 	],
 	entryComponents: [PackagePaymentComponent]
 })

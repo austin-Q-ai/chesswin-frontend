@@ -16,6 +16,8 @@ import { RefundPolicyComponent } from '../containers/refund-policy/refund-policy
 import { SignupComponent } from '../containers/signup/signup.component';
 import { VerifyComponent } from '../containers/verify/verify.component';
 import { HomeComponent } from '../containers/home/home.component';
+import { MainTemplateComponent } from '../containers/main-template/main-template.component';
+import { PlayChesscoinComponent } from '../containers/play-chesscoin/play-chesscoin.component';
 
 const landingRoutes: Routes = [
 	{
@@ -77,6 +79,17 @@ const landingRoutes: Routes = [
 		path: 'home',
 		component: HomeComponent,
 		canActivate: [HomeGuard]
+	},
+	{
+		path: '',
+		component: MainTemplateComponent,
+		canActivate: [HomeGuard],
+		children: [
+			{
+				path: 'play-chesscoin',
+				component: PlayChesscoinComponent
+			}
+		]
 	}
 	// {
 	//   path: 'about-us',
