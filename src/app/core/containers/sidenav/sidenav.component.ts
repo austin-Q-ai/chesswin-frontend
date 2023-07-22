@@ -10,15 +10,15 @@ export class SidenavComponent implements OnInit {
 	showMenu = true;
 	responsiveView = false;
 	items = [
-		{ 'icon':'home.svg', 'itemText': 'Home'},
-		{ 'icon':'about us.svg', 'itemText': 'About Us'},
-		{ 'icon':'question icon gold.svg', 'itemText': 'Question / Answer'},
-		{ 'icon':'coins gold icon.svg', 'itemText': 'Play with ChessCoin'},
-		{ 'icon':'icon hand with coin gols.svg', 'itemText': 'ChessCoin Shop'},
-		{ 'icon':'coin play for free gold.svg', 'itemText': 'Play for free'},
-		{ 'icon':'cubo gold png.svg', 'itemText': 'Play with a Friend'},
-		{ 'icon':'contact us icon gold.svg', 'itemText': 'Contact Us'},
-		{ 'icon':'icon hand with coin gols.svg', 'itemText': 'Wallet Withdraw'},
+		{ 'icon':'home.png', 'itemText': 'Home'},
+		{ 'icon':'about us.png', 'itemText': 'About Us'},
+		{ 'icon':'question icon gold.png', 'itemText': 'Question / Answer'},
+		{ 'icon':'coins gold icon.png', 'itemText': 'Play with ChessCoin'},
+		{ 'icon':'icon hand with coin gols.png', 'itemText': 'ChessCoin Shop'},
+		{ 'icon':'coin play for free gold.png', 'itemText': 'Play for free'},
+		{ 'icon':'cubo gold png.png', 'itemText': 'Play with a Friend'},
+		{ 'icon':'contact us icon gold.png', 'itemText': 'Contact Us'},
+		{ 'icon':'icon hand with coin gols.png', 'itemText': 'Wallet Withdraw'},
 	]
 
 	constructor() { }

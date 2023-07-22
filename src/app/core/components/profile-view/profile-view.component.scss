@@ -1,77 +1,77 @@
 @import '../../../../assets/style/style.scss';
 
 .profile-container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
 }
 
 .logo-container {
-  width: 100%;
-  padding: 40px 0 25px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	width: 100%;
+	padding: 40px 0 25px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
-  a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    outline: none;
-  }
+	a {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		outline: none;
+	}
 }
 
 .profile {
-  position: relative;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 25px 0px;
-  border-bottom: 3px solid rgb(23, 45, 63);
+	position: relative;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 25px 0px;
+	border-bottom: 3px solid rgb(23, 45, 63);
 
-  &__settings-icon-container {
-    position: absolute;
-    right: 0;
-    top: 28px;
-    cursor: pointer;
-  }
+	&__settings-icon-container {
+		position: absolute;
+		right: 0;
+		top: 28px;
+		cursor: pointer;
+	}
 
-  &__image {
-    margin-bottom: 16px;
-    border: 2px solid #fff;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center;
+	&__image {
+		margin-bottom: 16px;
+		border: 2px solid #fff;
+		border-radius: 50%;
+		object-fit: cover;
+		object-position: center;
 
-    &--default {
-      border: none;
-    }
-  }
+		&--default {
+			border: none;
+		}
+	}
 
-  &__name {
-    color: #fff;
-  }
+	&__name {
+		color: #fff;
+	}
 }
 
 .menu-button {
-  font-family: 'aileron-semibold', sans-serif;
-  display: inline-block;
-  text-align: left;
-  vertical-align: middle;
-  outline: none;
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 1px;
-  cursor: pointer;
-  padding: 0 16px;
+	font-family: 'aileron-semibold', sans-serif;
+	display: inline-block;
+	text-align: left;
+	vertical-align: middle;
+	outline: none;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 1px;
+	cursor: pointer;
+	padding: 0 16px;
 
-  transition: 0.2s ease;
-  -webkit-transition: 0.2s ease;
-  -moz-transition: 0.2s ease;
+	transition: 0.2s ease;
+	-webkit-transition: 0.2s ease;
+	-moz-transition: 0.2s ease;
 }
 
 .profile-user-name {
@@ -82,8 +82,8 @@
 	font-style: normal;
 	font-weight: 500;
 	line-height: normal;
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .profile-basic {
@@ -102,9 +102,9 @@
 	display: flex;
 	align-items: center;
 	border-radius: 5px;
-	background: #1F394B;
+	background: #1f394b;
 	img {
-		width: 40px;
+		width: 30px;
 		height: 30px;
 	}
 	color: white;

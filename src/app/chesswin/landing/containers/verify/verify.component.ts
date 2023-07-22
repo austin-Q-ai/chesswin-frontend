@@ -13,7 +13,7 @@ export class VerifyComponent implements OnInit {
 	languageLabels;
 	requesting: Boolean = false;
 
-	verified: Boolean = false;
+	verified: Boolean = true;
 
 	constructor(
 		private facadeService: FacadeService
