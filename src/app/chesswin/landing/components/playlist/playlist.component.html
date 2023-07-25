@@ -1,11 +1,24 @@
 <div class="presentation-playlist">
 	<p class="header">Remember 10 ChessCoin is 1.00$</p>
 	<div class="playlist-menu">
-		<img src="../../../../../assets/icons/updated/timer icon.png" width="32" height="38">
-		<p>10 minutes</p>
-		<img src="../../../../../assets/icons/updated/right arrow.png" width="37" height="42">
+		<div class="playlist-main" (click)="menuOpen()">
+			<img src="../../../../../assets/icons/updated/timer icon.png" width="32" height="38">
+			<p>{{time}} minutes</p>
+			<img src="../../../../../assets/icons/updated/right arrow.png" width="37" height="42">
+		</div>
+		<div style="width: 86%;align-self: center;overflow: hidden;" *ngIf="timeMenuOpened">
+			<div class="playlist-item"></div>
+			<div class="playlist-item" *ngFor="let item of [1, 3, 5, 10]" (click)="timeSet(item)">
+				<img src="../../../../../assets/icons/updated/timer icon white.png" width="32" height="38">
+				{{item}} minutes
+			</div>
+			<div style="margin-bottom: 34px;"></div>
+		</div>
 	</div>
-	<div *ngFor="let item of [1,2,3,4,5]">
+	<div *ngFor="let item of items">
 		<app-playlist-item [index]="item"></app-playlist-item>
 	</div>
+	<button class="find-button">
+		Find my oponent
+	</button>
 </div>

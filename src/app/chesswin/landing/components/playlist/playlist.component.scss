@@ -19,13 +19,45 @@
 	}
 
 	.playlist-menu {
+		width: 100%;
+		border-radius: 10px;
+		background: #1f394b;
+		margin: 15px 0 25px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.playlist-main {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		height: 60px;
-		border-radius: 10px;
-		background: #1f394b;
 		padding: 11px 87px;
-		margin: 15px 0 25px;
+		cursor: pointer;
+	}
+
+	.playlist-item {
+		display: flex;
+		align-items: center;
+		padding: 10px 100px;
+		margin: 5px 0;
+		border-bottom: 2px solid #5c899d;
+		justify-content: space-between;
+		color: white;
+		font-family: 'Poppins';
+		font-size: 20px;
+		font-weight: 400;
+		cursor: pointer;
+	}
+
+	.find-button {
+		width: 100%;
+		padding: 16px 96px;
+		color: #071522;
+		font-family: 'Poppins';
+		font-size: 25px;
+		font-weight: 700;
+		border-radius: 10px;
+		background: linear-gradient(180deg, #a3ca49 0%, #7eb35a 100%);
+		cursor: pointer;
 	}
 }
