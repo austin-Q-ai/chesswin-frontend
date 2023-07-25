@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PlayChesscoinComponent } from './play-chesscoin.component';
+import { PlayFreeComponent } from './play-free.component';
 
-describe('PlayChesscoinComponent', () => {
-	let component: PlayChesscoinComponent;
-	let fixture: ComponentFixture<PlayChesscoinComponent>;
+describe('PlayFreeComponent', () => {
+	let component: PlayFreeComponent;
+	let fixture: ComponentFixture<PlayFreeComponent>;
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			declarations: [ PlayChesscoinComponent ]
+			declarations: [ PlayFreeComponent ]
 		})
 			.compileComponents();
 	});
 
 	beforeEach(() => {
-		fixture = TestBed.createComponent(PlayChesscoinComponent);
+		fixture = TestBed.createComponent(PlayFreeComponent);
 		component = fixture.componentInstance;
 		fixture.detectChanges();
 	});

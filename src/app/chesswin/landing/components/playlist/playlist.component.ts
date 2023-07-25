@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
 	selector: 'app-playlist',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: ['./playlist.component.scss']
 })
 export class PlaylistComponent implements OnInit {
+	@Input() playWithFree: boolean;
 	
 	timeMenuOpened :boolean = false;
 	time: number = 10;
@@ -25,6 +26,7 @@ export class PlaylistComponent implements OnInit {
 	timeSet(time: number) {
 		this.time = time;
 		this.timeMenuOpened = false;
+		this.items = [1,2,3,4,5];
 	}
 
 }

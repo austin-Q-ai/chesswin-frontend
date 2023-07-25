@@ -18,6 +18,7 @@ import { VerifyComponent } from '../containers/verify/verify.component';
 import { HomeComponent } from '../containers/home/home.component';
 import { MainTemplateComponent } from '../containers/main-template/main-template.component';
 import { PlayChesscoinComponent } from '../containers/play-chesscoin/play-chesscoin.component';
+import { PlayFreeComponent } from '../containers/play-free/play-free.component';
 
 const landingRoutes: Routes = [
 	{
@@ -88,6 +89,10 @@ const landingRoutes: Routes = [
 			{
 				path: 'play-chesscoin',
 				component: PlayChesscoinComponent
+			},
+			{
+				path: 'play-free',
+				component: PlayFreeComponent
 			}
 		]
 	}

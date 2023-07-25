@@ -7,6 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PlaylistItemComponent implements OnInit {
 	@Input() index: number;
+	@Input() playWithFree: Boolean;
+	
 	imageList = ['gold coin blank', 'blue green coin', 'red coin', 'green coin', 'coin naranja'];
 
 	constructor() { }
