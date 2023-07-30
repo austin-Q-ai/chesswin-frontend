@@ -3,12 +3,12 @@
 .presentation-playlist {
 	width: 425px;
 	font-family: 'Poppins';
-	font-size: 25px;
 
 	p.header {
 		color: #01dc17;
 		font-style: normal;
 		font-weight: 600;
+		font-size: 25px;
 		line-height: normal;
 	}
 
@@ -41,7 +41,7 @@
 		padding: 10px 100px;
 		margin: 5px 0;
 		border-bottom: 2px solid #5c899d;
-		justify-content: space-between;
+		justify-content: space-around;
 		color: white;
 		font-family: 'Poppins';
 		font-size: 20px;
@@ -55,6 +55,7 @@
 		color: #071522;
 		font-family: 'Poppins';
 		font-weight: 700;
+		font-size: 25px;
 		border-radius: 10px;
 		background: linear-gradient(180deg, #a3ca49 0%, #7eb35a 100%);
 		cursor: pointer;
@@ -65,10 +66,12 @@
 	}
 
 	@include mq(576px) {
-		font-size: 15px;
-
 		.playlist-main {
 			padding: 11px 38px;
+		}
+
+		p.header {
+			font-size: 19px;
 		}
 
 		p {
