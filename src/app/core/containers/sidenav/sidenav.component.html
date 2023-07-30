@@ -1,36 +1,40 @@
-<mat-icon class="menu-toggler" (click)="showMenu = !showMenu">{{
-	showMenu ? 'clear' : 'dehaze'
-	}}</mat-icon>
-
 <div>
 	<mat-sidenav-container class="viewport">
-		<mat-sidenav class="side-nav" [opened]="showMenu" fixedInViewport="true"
-			[mode]="responsiveView ? 'over' : 'side'" (closed)="showMenu = false">
-
-			<app-profile-view></app-profile-view>
+		<mat-sidenav class="side-nav" [opened]="true" [mode]="'side'">
+			<div class="profile-container">
+				<div class="logo-container">
+					<a routerLink="/app">
+						<img src="../../../../../../assets/images/dashboard/chess-win-logo.png" alt="chess-win-logo"
+							width="150px" />
+					</a>
+				</div>
+				<app-profile-view style="width: 100%;"></app-profile-view>
+			</div>
 			<div *ngFor="let item of items">
 				<app-sidenav-item [icon]="item.icon" [itemText]="item.itemText"></app-sidenav-item>
 			</div>
 			<app-sidenav-log-button></app-sidenav-log-button>
 		</mat-sidenav>
 
+		<mat-toolbar class="header-mobile">
+			<mat-menu #menu="matMenu" class="header-menu">
+				<button *ngFor="let item of items" style="width: 100%;background-color: #052534;">
+					<app-sidenav-item [icon]="item.icon" [itemText]="item.itemText"></app-sidenav-item>
+				</button>
+			</mat-menu>
+			<button mat-icon-button [matMenuTriggerFor]="menu">
+				<mat-icon [ngStyle]="{'color':'white'}">menu</mat-icon>
+			</button>
+			<img src="../../../../assets/images/dashboard/chess-win-logo.png" alt="chess-win-logo" width="80px"
+				[ngStyle]="{'margin':'0 10px'}" />
+			<img src="../../../../assets/icons/updated/gold-coins.png" alt="gold coin">
+			<app-profile-view style="width: 100%;" *ngIf="loggedIn"></app-profile-view>
+			<app-sidenav-log-button [ngStyle]="{'width':'100%','justify-content':'flex-end','display':'flex'}"
+				*ngIf="!loggedIn"></app-sidenav-log-button>
+		</mat-toolbar>
+
 		<div class="main-content">
-			<!-- <div class="header-description">
-				<h1 class="heading1 packages-title" (click)="navigateToPackages()">
-					Buy Gold Coins
-				</h1>
-				<h1 class="heading1 packages-title" (click)="navigateToCash()">
-					Convert to Cash
-				</h1>
-			</div> -->
-
 			<router-outlet></router-outlet>
-
-			<!-- <div>
-				<p style="color: white;" (click)="navigateToCreditCard()">
-					Credit Card
-				</p>
-			</div> -->
 		</div>
 	</mat-sidenav-container>
 </div>

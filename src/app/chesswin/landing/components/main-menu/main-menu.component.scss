@@ -1,0 +1,13 @@
+@import '../../../../../assets/style/style.scss';
+
+.main-menu {
+	margin-right: 100px;
+
+	@include mq(1024px) {
+		margin-right: 50px;
+	}
+
+	@include mq(992px) {
+		margin-right: 0px;
+	}
+}

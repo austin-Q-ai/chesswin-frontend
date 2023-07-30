@@ -1,11 +1,8 @@
 @import '../../../../../assets/style/style.scss';
 
 .gradient-background {
-	background-image: linear-gradient($dark-indigo-two, $midnight-two);
-
 	.presentation-section {
 		position: relative;
-		background-image: url(../../../../../assets/images/chess-background.png);
 		background-position: top left;
 		background-repeat: no-repeat;
 		background-size: 100% 46%;
@@ -20,8 +17,14 @@
 				margin-top: 64px;
 
 				@include mq(992px) {
+					max-width: 90%;
 					margin: 0 auto !important;
 					padding-top: 30px;
+					flex-direction: column;
+
+					.app-main-menu {
+						display: none;
+					}
 				}
 			}
 		}

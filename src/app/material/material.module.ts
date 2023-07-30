@@ -9,6 +9,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTableModule } from '@angular/material/table';
 import { MatTooltipModule } from '@angular/material/tooltip';
@@ -25,6 +26,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 		MatProgressSpinnerModule,
 		MatSelectModule,
 		MatSidenavModule,
+		MatToolbarModule,
 		MatSnackBarModule,
 		MatTableModule,
 		MatTooltipModule,
@@ -40,6 +42,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 		MatProgressSpinnerModule,
 		MatSelectModule,
 		MatSidenavModule,
+		MatToolbarModule,
 		MatSnackBarModule,
 		MatTableModule,
 		MatTooltipModule,

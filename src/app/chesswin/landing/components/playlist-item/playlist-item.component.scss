@@ -1,16 +1,12 @@
 @import '../../../../../assets/style/style.scss';
 
 .playlist-item {
-	width: 400px;
+	width: 94%;
 	height: 77px;
 	border-radius: 20px;
 	display: flex;
 	padding: 30px 20px;
 	align-items: center;
-
-	@include mq(992px) {
-		width: 100%;
-	}
 
 	p {
 		font-family: 'Poppins';
@@ -26,6 +22,7 @@
 	.image-text-container {
 		position: relative;
 		margin-right: -70px;
+		margin-left: auto;
 
 		.main-img {
 			width: 100%;
@@ -54,6 +51,12 @@
 			font-size: 11px;
 			font-style: normal;
 			font-weight: 700;
+		}
+	}
+
+	@include mq(576px) {
+		p {
+			font-size: 15px;
 		}
 	}
 }

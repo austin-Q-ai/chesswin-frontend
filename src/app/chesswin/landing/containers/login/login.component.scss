@@ -1,11 +1,8 @@
-@import "../../../../../assets/style/style.scss";
+@import '../../../../../assets/style/style.scss';
 
 .gradient-background {
-	background-image: linear-gradient($dark-indigo-two, $midnight-two);
-
 	.presentation-section {
 		position: relative;
-		background-image: url(../../../../../assets/images/chess-background.png);
 		background-position: top left;
 		background-repeat: no-repeat;
 		background-size: 100% 46%;
@@ -37,6 +34,7 @@
 				margin-top: 64px;
 
 				@include mq(992px) {
+					max-width: 80%;
 					margin: 0 auto !important;
 					padding-top: 30px;
 				}
@@ -54,7 +52,7 @@
 					}
 
 					.label {
-						font-family: "aileron-semibold", sans-serif;
+						font-family: 'aileron-semibold', sans-serif;
 						font-size: 14px;
 						line-height: 18px;
 						color: $mushroom;
@@ -63,24 +61,26 @@
 						margin-top: 32px;
 					}
 
-					::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
-						color: #ecbe7d!important;
+					::ng-deep
+						.mat-form-field-appearance-outline
+						.mat-form-field-outline {
+						color: #ecbe7d !important;
 						background-color: #676565;
 						// opacity: 1!important;
 					}
 
 					::ng-deep .mat-input-element {
-						caret-color: #ecbe7d!important;
+						caret-color: #ecbe7d !important;
 						color: white;
 						padding-left: 10px;
 					}
 
 					::ng-deep .mat-input-element::placeholder {
-						color: #D2D2D2!important;
+						color: #d2d2d2 !important;
 					}
 
 					::ng-deep .mat-icon {
-						color: white!important;
+						color: white !important;
 						background-color: #676565;
 						cursor: pointer;
 					}
@@ -114,18 +114,18 @@
 
 					.button-sand-gradient {
 						margin-top: 15px;
-						font-family: "aileron-bold", sans-serif;
+						font-family: 'aileron-bold', sans-serif;
 						font-size: 16px;
 						line-height: 22px;
 						letter-spacing: normal;
 						border-radius: 10px;
-						border: 2px solid #F7AC65;
-						background: #F7AC65;
+						border: 2px solid #f7ac65;
+						background: #f7ac65;
 					}
 
 					.guest-player {
 						background-color: #052534;
-						color: #F7AC65;
+						color: #f7ac65;
 					}
 				}
 
@@ -133,7 +133,7 @@
 					margin-top: 48px;
 
 					.paragraph {
-						font-family: "aileron-regular", sans-serif;
+						font-family: 'aileron-regular', sans-serif;
 					}
 
 					.action-buttons {
@@ -199,7 +199,7 @@
 				}
 
 				.paragraph {
-					font-family: "aileron-bold", sans-serif;
+					font-family: 'aileron-bold', sans-serif;
 					margin-bottom: 24px;
 				}
 			}
@@ -211,7 +211,7 @@
 	position: absolute;
 	left: 12px;
 	top: calc(100% + 5px);
-	font-family: "aileron-regular", sans-serif;
+	font-family: 'aileron-regular', sans-serif;
 	font-size: 12px;
 	color: $coral-pink;
 }
@@ -220,7 +220,7 @@
 	margin-top: 15px;
 	height: 12px;
 	width: 100%;
-	font-family: "aileron-regular", sans-serif;
+	font-family: 'aileron-regular', sans-serif;
 	font-size: 12px;
 	color: $coral-pink;
 }

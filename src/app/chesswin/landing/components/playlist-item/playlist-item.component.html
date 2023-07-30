@@ -1,9 +1,12 @@
 <div class="playlist-item"
 	[style.background-image]="playWithFree ? 'url(../../../../../assets/images/rectangle_plata.png)' : 'url(../../../../../assets/images/rectangle_gold.png)'">
 	<img src="../../../../../assets/icons/updated/horse icon.png" width="60" height="60">
-	<p>Play on table with</p>
-	<img
-		[src]="playWithFree ? '../../../../../assets/icons/updated/silver-coins.png' : '../../../../../assets/icons/updated/gold-coins.png'">
+	<div
+		[ngStyle]="{'display':'flex', 'align-items':'center', 'display':'flex', 'width':'100%', 'margin-right': '-50px'}">
+		<p>Play on table with</p>
+		<img [src]="playWithFree ? '../../../../../assets/icons/updated/silver-coins.png' : '../../../../../assets/icons/updated/gold-coins.png'"
+			[ngStyle]="{'margin-left':'auto', 'margin-right':'50px'}">
+	</div>
 	<div class="image-text-container">
 		<img class="main-img" *ngIf="playWithFree" src="../../../../../assets/icons/updated/gold coin blank.png">
 		<img class="main-img" *ngIf="!playWithFree"

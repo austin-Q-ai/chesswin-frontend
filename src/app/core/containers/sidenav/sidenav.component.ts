@@ -6,9 +6,9 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: ['./sidenav.component.scss']
 })
 export class SidenavComponent implements OnInit {
+
+	loggedIn: boolean = true;
 	
-	showMenu = true;
-	responsiveView = false;
 	items = [
 		{ 'icon':'home.png', 'itemText': 'Home'},
 		{ 'icon':'about us.png', 'itemText': 'About Us'},

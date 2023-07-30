@@ -1,28 +1,5 @@
 @import '../../../../assets/style/style.scss';
 
-.profile-container {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-}
-
-.logo-container {
-	width: 100%;
-	padding: 40px 0 25px 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-	a {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		outline: none;
-	}
-}
-
 .profile {
 	position: relative;
 	width: 100%;
@@ -32,6 +9,7 @@
 	text-align: center;
 	padding: 25px 0px;
 	border-bottom: 3px solid rgb(23, 45, 63);
+	justify-content: space-between;
 
 	&__settings-icon-container {
 		position: absolute;
@@ -55,23 +33,11 @@
 	&__name {
 		color: #fff;
 	}
-}
 
-.menu-button {
-	font-family: 'aileron-semibold', sans-serif;
-	display: inline-block;
-	text-align: left;
-	vertical-align: middle;
-	outline: none;
-	font-size: 14px;
-	line-height: 20px;
-	letter-spacing: 1px;
-	cursor: pointer;
-	padding: 0 16px;
-
-	transition: 0.2s ease;
-	-webkit-transition: 0.2s ease;
-	-moz-transition: 0.2s ease;
+	@include mq(1024px) {
+		flex-direction: row;
+		border-bottom: transparent;
+	}
 }
 
 .profile-user-name {
@@ -84,10 +50,44 @@
 	line-height: normal;
 	display: flex;
 	flex-direction: column;
+
+	.flag-img {
+		width: 40px;
+		height: 33px;
+	}
+
+	@include mq(1024px) {
+		padding: 0 10px;
+
+		.flag-img {
+			width: 25px;
+			height: 20px;
+		}
+	}
+
+	@include mq(576px) {
+		font-size: 12px;
+
+		.txt {
+			white-space: pre-line;
+			max-width: 45px;
+		}
+	}
 }
 
 .profile-basic {
 	display: flex;
+
+	.avatar-img {
+		@include mq(1024px) {
+			margin-left: 10px;
+			width: 35px;
+		}
+
+		@include mq(576px) {
+			margin-left: 0px;
+		}
+	}
 }
 
 .profile-gold {
@@ -95,6 +95,12 @@
 	display: flex;
 	padding: 20px 0 0 0;
 	justify-content: space-around;
+
+	@include mq(1024px) {
+		padding: 0px;
+		width: inherit;
+		justify-content: flex-end;
+	}
 }
 
 .gold-basic {
@@ -108,12 +114,26 @@
 		height: 30px;
 	}
 	color: white;
-	font-family: Poppins;
+	font-family: 'Poppins';
 	font-size: 15px;
 	font-weight: 700;
 	line-height: normal;
-}
+	margin: 1px 5px;
 
-.gold-number {
-	padding-left: 15px;
+	.gold-number {
+		padding-left: 15px;
+	}
+
+	@include mq(576px) {
+		padding: 8px 4px;
+
+		img {
+			width: 15px;
+			height: 15px;
+		}
+		.gold-number {
+			padding-left: 6px;
+			font-size: 10px;
+		}
+	}
 }

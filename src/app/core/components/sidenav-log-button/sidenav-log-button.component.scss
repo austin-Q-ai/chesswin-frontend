@@ -1,25 +1,44 @@
 @import '../../../../assets/style/style.scss';
 
-
 .side-nav-item.button {
 	display: flex;
-    flex-direction: column;
+	flex-direction: column;
 	margin-top: 20px;
+
+	@include mq(1024px) {
+		margin-top: 0px;
+		flex-direction: row;
+	}
 }
 
 .side-nav-item-button {
 	width: 38%;
-	font-family: "aileron-bold", sans-serif;
+	font-family: 'aileron-bold', sans-serif;
 	font-size: 15px;
 	margin: 5px 25px;
 	padding: 13px 0;
 	border-radius: 10px;
+
+	@include mq(1024px) {
+		width: 100px;
+		border-radius: 10px;
+		margin: 0 10px;
+		padding: 10px 0;
+	}
+
+	@include mq(576px) {
+		font-size: 10px;
+		width: 60px;
+		border-radius: 5px;
+		margin: 0 5px;
+		padding: 10px 0;
+	}
 }
-	.log {
-		color: white;
-		background-color: #0C3142;
-	}
-	.sign {
-		color: black;
-		background: linear-gradient(180deg, #F7AC65 33.33%, #E3BC98 100%);
-	}
+.log {
+	color: white;
+	background-color: #0c3142;
+}
+.sign {
+	color: black;
+	background: linear-gradient(180deg, #f7ac65 33.33%, #e3bc98 100%);
+}
