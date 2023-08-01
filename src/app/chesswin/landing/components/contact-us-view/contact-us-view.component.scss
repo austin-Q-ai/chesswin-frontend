@@ -1,52 +1,122 @@
-@import "../../../../../assets/style/style.scss";
+@import '../../../../../assets/style/style.scss';
 
-.wrapper {
-	min-height: 65vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-}
+.gradient-background {
+	.presentation-section {
+		position: relative;
+		background-position: top left;
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
 
-h1 {
-	color: $very-light-pink-2;
+		.presentation-image {
+			max-height: 550px;
+			max-width: 35%;
+			position: absolute;
+			top: 350px;
+			right: 0;
 
-	@include mq(768px) {
-		font-size: 24px;
-	}
+			@include mq(1200px) {
+				max-height: unset;
+				// max-width: 50%;
+			}
 
-	a {
-		color: $sand;
-	}
+			@include mq(992px) {
+				display: none;
+			}
+		}
 
-	@include mq(576px) {
-		padding: 0 20px;
-	}
-}
-div {
-	display: flex;
-	flex-direction: row;
-	margin-top: 20px;
-	width: 100%;
-	justify-content: center;
-	padding: 20px;
-}
-.guerra-ltd {
-	border-radius: 4px;
-	width: 100%;
-	max-width: 340px;
-	background: white;
-	justify-content: center;
-	flex-direction: column;
-	padding: 10px;
+		.presentation-wrapper {
+			padding: 42px 0 55px;
 
-	p {
-		font-family: aileron-bold, sans-serif;
-		line-height: 1.3;
-		margin-bottom: 10px;
-	}
+			.text-gradient {
+				color: $sand;
+			}
 
-	&:first-child {
-		margin-right: 10px;
+			.sub-title {
+				font-size: 25px;
+				color: #D2D2D2;
+				text-align: center;
+				padding: 40px;
+				line-height: normal;
+
+				@include mq(576px) {
+					font-size: 20px;
+				}
+			}
+
+			.contact-area {
+				border-radius: 10px;
+				border: 2px solid #F7AC65;
+				background: #071522;
+				padding: 50px 70px 105px 70px;
+				display: flex;
+				flex-direction: column;
+				max-width: 650px;
+				margin-top: 64px;
+
+				@include mq(576px) {
+					max-width: 90%;
+					margin: 0 auto !important;
+					padding: 30px 0;
+				}
+
+				h1 {
+					text-align: center;
+					color: #D2D2D2;
+					padding-bottom: 100px;
+
+					@include mq(576px) {
+						padding-bottom: 50px;
+					}
+				}
+
+				h2 {
+					color: $very-light-pink-2;
+					text-align: center;
+
+					@include mq(768px) {
+						font-size: 24px;
+					}
+
+					a {
+						color: $sand;
+					}
+
+					@include mq(576px) {
+						padding: 0 20px;
+					}
+				}
+
+				div {
+					display: flex;
+					flex-direction: row;
+					margin-top: 50px;
+					width: 100%;
+					justify-content: center;
+				}
+
+				.guerra-ltd {
+					border-radius: 4px;
+					color: #D2D2D2;
+					width: 100%;
+					max-width: 340px;
+					background: #052534;
+					justify-content: center;
+					flex-direction: column;
+					padding: 10px;
+					margin: 0 10px;
+
+					p {
+						font-family: aileron-bold, sans-serif;
+						line-height: 1.3;
+						margin-bottom: 10px;
+					}
+
+					&:first-child {
+						margin-right: 10px;
+					}
+				}
+
+			}
+		}
 	}
 }
