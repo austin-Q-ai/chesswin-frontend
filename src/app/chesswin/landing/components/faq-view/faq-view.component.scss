@@ -1,11 +1,8 @@
 @import "../../../../../assets/style/style.scss";
 
 .gradient-background {
-	background-image: linear-gradient($dark-indigo-two, $midnight-two);
-
 	.faq-section {
 		position: relative;
-		background: url(../../../../../assets/images/chess-background.png) no-repeat;
 		box-sizing: border-box;
 		background-size: 100%;
 
@@ -15,8 +12,40 @@
 			.title-area {
 				margin-bottom: 80px;
 
+				@include mq(576px) {
+					.title-desktop {
+						display: none;
+					}
+				}
+
+				.main-title {
+					color: white;
+					padding-top: 30px;
+
+					@include mq(576px) {
+						color: $sand;
+						padding-top: 10px
+					}
+				}
+
 				.text-gradient {
 					color: $sand;
+				}
+
+				.sub-title {
+					font-size: 25px;
+					color: #D2D2D2;
+					text-align: center;
+					padding: 40px 30px 10px;
+					line-height: normal;
+
+					@include mq(576px) {
+						font-size: 20px;
+					}
+				}
+
+				@include mq(576px) {
+					margin-bottom: 50px;
 				}
 			}
 
@@ -24,16 +53,20 @@
 				width: 100%;
 				max-width: 940px;
 				margin: 0 auto !important;
+				border-radius: 10px;
+				border: 2px solid #F7AC65;
+				background: #071522;
 
 				.accordion-container {
 					display: flex;
 					flex-direction: column;
+					padding: 27px 17px;
 
 					.accordion-item {
 						width: 100%;
 						display: flex;
 						flex-direction: column;
-						background-image: linear-gradient(#002557, #152134);
+						background: #1F394B;
 						border: 2px solid $sand;
 						border-radius: 6px;
 						box-sizing: border-box;
@@ -73,6 +106,10 @@
 							padding: 12px 75px 24px 16px;
 							box-sizing: border-box;
 
+							@include mq(576px) {
+								padding-right: 25px;
+							}
+
 							.paragraph-short {
 								font-family: "aileron-regular", sans-serif;
 							}
@@ -91,7 +128,7 @@
 					}
 
 					.icon-down {
-						transform: rotate(180deg);
+						transform: rotate(90deg);
 					}
 				}
 			}
