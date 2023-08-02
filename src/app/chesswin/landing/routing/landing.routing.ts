@@ -20,6 +20,7 @@ import { MainTemplateComponent } from '../containers/main-template/main-template
 import { PlayChesscoinComponent } from '../containers/play-chesscoin/play-chesscoin.component';
 import { PlayFreeComponent } from '../containers/play-free/play-free.component';
 import { PlayFriendComponent } from "../containers/play-friend/play-friend.component";
+import { WaitingOpponentComponent } from "../containers/waiting-opponent/waiting-opponent.component";
 
 const landingRoutes: Routes = [
 	{
@@ -85,6 +86,11 @@ const landingRoutes: Routes = [
 	{
 		path: 'play-friend',
 		component: PlayFriendComponent,
+		canActivate: [HomeGuard]
+	},
+	{
+		path: 'waiting-opponent',
+		component: WaitingOpponentComponent,
 		canActivate: [HomeGuard]
 	},
 	{

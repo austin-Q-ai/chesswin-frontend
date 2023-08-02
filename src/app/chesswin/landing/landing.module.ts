@@ -46,6 +46,8 @@ import { PlayChesscoinComponent } from './containers/play-chesscoin/play-chessco
 import { PlayFreeComponent } from './containers/play-free/play-free.component';
 import { PlayFriendComponent } from './containers/play-friend/play-friend.component';
 import { PlayFriendViewComponent } from './components/play-friend-view/play-friend-view.component';
+import { WaitingOpponentViewComponent } from './components/waiting-opponent-view/waiting-opponent-view.component';
+import { WaitingOpponentComponent } from './containers/waiting-opponent/waiting-opponent.component';
 
 @NgModule({
 	imports: [CommonModule, LandingRouting, ReactiveFormsModule],
@@ -87,6 +89,8 @@ import { PlayFriendViewComponent } from './components/play-friend-view/play-frie
 		PlayFreeComponent,
 		PlayFriendComponent,
 		PlayFriendViewComponent,
+		WaitingOpponentViewComponent,
+		WaitingOpponentComponent,
 	],
 	entryComponents: [PackagePaymentComponent]
 })
