@@ -44,6 +44,8 @@ import { PlaylistComponent } from './components/playlist/playlist.component';
 import { PlaylistItemComponent } from './components/playlist-item/playlist-item.component';
 import { PlayChesscoinComponent } from './containers/play-chesscoin/play-chesscoin.component';
 import { PlayFreeComponent } from './containers/play-free/play-free.component';
+import { PlayFriendComponent } from './containers/play-friend/play-friend.component';
+import { PlayFriendViewComponent } from './components/play-friend-view/play-friend-view.component';
 
 @NgModule({
 	imports: [CommonModule, LandingRouting, ReactiveFormsModule],
@@ -83,6 +85,8 @@ import { PlayFreeComponent } from './containers/play-free/play-free.component';
 		PlaylistItemComponent,
 		PlayChesscoinComponent,
 		PlayFreeComponent,
+		PlayFriendComponent,
+		PlayFriendViewComponent,
 	],
 	entryComponents: [PackagePaymentComponent]
 })

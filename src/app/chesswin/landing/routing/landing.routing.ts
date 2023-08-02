@@ -19,6 +19,7 @@ import { HomeComponent } from '../containers/home/home.component';
 import { MainTemplateComponent } from '../containers/main-template/main-template.component';
 import { PlayChesscoinComponent } from '../containers/play-chesscoin/play-chesscoin.component';
 import { PlayFreeComponent } from '../containers/play-free/play-free.component';
+import { PlayFriendComponent } from "../containers/play-friend/play-friend.component";
 
 const landingRoutes: Routes = [
 	{
@@ -79,6 +80,11 @@ const landingRoutes: Routes = [
 	{
 		path: 'home',
 		component: HomeComponent,
+		canActivate: [HomeGuard]
+	},
+	{
+		path: 'play-friend',
+		component: PlayFriendComponent,
 		canActivate: [HomeGuard]
 	},
 	{

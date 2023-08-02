@@ -79,6 +79,7 @@
 						margin: 20px 0;
 						text-align: center;
 						line-height: normal;
+
 						.login-request {
 							color: #d2d2d2;
 							font-size: 20px;
@@ -99,9 +100,7 @@
 						margin: 0;
 					}
 
-					::ng-deep
-						.mat-form-field-appearance-outline
-						.mat-form-field-outline {
+					::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
 						color: transparent !important;
 						background-color: #676565;
 						border-radius: 5px;
@@ -177,58 +176,6 @@
 						background-color: #052534;
 						color: #f7ac65;
 					}
-				}
-			}
-		}
-
-		.are-you-ready-wrapper {
-			border-radius: 12px;
-			border: 2px solid $sand;
-			padding: 58px 24px 58px 54px;
-			margin-top: 24px !important;
-			margin-bottom: 80px !important;
-
-			@include mq(576px) {
-				padding: 32px 16px 32px 32px;
-			}
-
-			.main-title {
-				margin-bottom: 68px;
-
-				@include mq(576px) {
-					margin-bottom: 42px;
-				}
-			}
-
-			.content-box {
-				width: 100%;
-				max-height: 448px;
-				overflow: auto;
-				padding-right: 59px;
-
-				@include custom-scrollbar;
-
-				overscroll-behavior: unset;
-
-				&::-webkit-scrollbar-track {
-					box-shadow: none;
-					-webkit-box-shadow: none;
-					background: transparent;
-				}
-
-				&::-webkit-scrollbar {
-					width: 5px;
-					height: 5px;
-					background: transparent;
-				}
-
-				@include mq(576px) {
-					padding-right: 24px;
-				}
-
-				.paragraph {
-					font-family: 'aileron-bold', sans-serif;
-					margin-bottom: 24px;
 				}
 			}
 		}
