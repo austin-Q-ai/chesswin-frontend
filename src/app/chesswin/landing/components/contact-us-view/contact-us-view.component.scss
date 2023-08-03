@@ -14,18 +14,20 @@
 			top: 350px;
 			right: 0;
 
-			@include mq(1200px) {
+			@include mq(992px) {
+				margin: 30px 0;
+				max-width: 100%;
+				position: inherit;
 				max-height: unset;
 				// max-width: 50%;
-			}
-
-			@include mq(992px) {
-				display: none;
 			}
 		}
 
 		.presentation-wrapper {
 			padding: 42px 0 55px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 
 			.text-gradient {
 				color: $sand;

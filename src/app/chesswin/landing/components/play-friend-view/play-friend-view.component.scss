@@ -14,13 +14,12 @@
 			top: 180px;
 			right: 0;
 
-			@include mq(1200px) {
+			@include mq(992px) {
+				padding: 20px 0 30px;
+				max-width: 100%;
+				position: inherit;
 				max-height: unset;
 				// max-width: 50%;
-			}
-
-			@include mq(992px) {
-				display: none;
 			}
 		}
 

@@ -14,13 +14,11 @@
 			top: 180px;
 			right: 0;
 
-			@include mq(1200px) {
+			@include mq(992px) {
+				max-width: 100%;
+				position: inherit;
 				max-height: unset;
 				// max-width: 50%;
-			}
-
-			@include mq(992px) {
-				display: none;
 			}
 		}
 
@@ -69,9 +67,7 @@
 						margin-top: 32px;
 					}
 
-					::ng-deep
-						.mat-form-field-appearance-outline
-						.mat-form-field-outline {
+					::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
 						color: transparent !important;
 						background-color: #676565;
 						border-radius: 5px;
@@ -201,6 +197,7 @@
 	display: flex !important;
 	align-items: center !important;
 }
+
 .country-option-text {
 	margin-left: 10px;
 }
