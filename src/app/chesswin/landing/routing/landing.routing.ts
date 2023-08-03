@@ -21,6 +21,7 @@ import { PlayChesscoinComponent } from '../containers/play-chesscoin/play-chessc
 import { PlayFreeComponent } from '../containers/play-free/play-free.component';
 import { PlayFriendComponent } from "../containers/play-friend/play-friend.component";
 import { WaitingOpponentComponent } from "../containers/waiting-opponent/waiting-opponent.component";
+import { ChesscoinShopComponent } from "../containers/chesscoin-shop/chesscoin-shop.component";
 
 const landingRoutes: Routes = [
 	{
@@ -91,6 +92,11 @@ const landingRoutes: Routes = [
 	{
 		path: 'waiting-opponent',
 		component: WaitingOpponentComponent,
+		canActivate: [HomeGuard]
+	},
+	{
+		path: 'chesscoin-shop',
+		component: ChesscoinShopComponent,
 		canActivate: [HomeGuard]
 	},
 	{

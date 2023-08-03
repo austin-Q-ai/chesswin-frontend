@@ -1,0 +1,23 @@
+<div class="wrapper">
+	<div class="packages-container">
+		<app-welcome></app-welcome>
+		<p class="paragraph1">
+			Here you can buy CHESS COIN to play chessin CHESSWINS, and also you convert your CHESS COIN in real Money
+		</p>
+
+		<p class="paragraph2" style="margin-top: -15px;">
+			Remember 10 ChessCoin - 1.00 $
+		</p>
+
+		<div class="packages">
+			<div class="package" *ngFor="let package of packages"
+				[ngStyle]="{ 'background-image': 'url(' + package.image + ')' }" width="45px">
+				<p class="package__name">{{ package.name }}</p>
+				<p class="package__cost">{{ package.coins }} Gold Coins</p>
+				<button type="button" class="package__buy-button">
+					Buy {{ package.price }}$ now
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
