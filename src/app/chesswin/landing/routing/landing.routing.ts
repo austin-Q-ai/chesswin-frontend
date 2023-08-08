@@ -10,20 +10,11 @@ import { PrivacyPolicyComponent } from '../containers/privacy-policy/privacy-pol
 import { HomeGuard } from 'src/app/guards/home.guard';
 import { LoginComponent } from '../containers/login/login.component';
 import { ContactUsComponent } from '../containers/contact-us/contact-us.component';
-import { PackagesComponent } from '../containers/packages/packages.component';
 import { TermsAndConditionsComponent } from '../containers/terms-and-conditions/terms-and-conditions.component';
 import { RefundPolicyComponent } from '../containers/refund-policy/refund-policy.component';
 import { SignupComponent } from '../containers/signup/signup.component';
 import { VerifyComponent } from '../containers/verify/verify.component';
 import { HomeComponent } from '../containers/home/home.component';
-import { MainTemplateComponent } from '../containers/main-template/main-template.component';
-import { PlayChesscoinComponent } from '../containers/play-chesscoin/play-chesscoin.component';
-import { PlayFreeComponent } from '../containers/play-free/play-free.component';
-import { PlayFriendComponent } from "../containers/play-friend/play-friend.component";
-import { WaitingOpponentComponent } from "../containers/waiting-opponent/waiting-opponent.component";
-import { ShopTemplateComponent } from "../containers/shop-template/shop-template.component";
-import { ChesscoinShopComponent } from "../containers/chesscoin-shop/chesscoin-shop.component";
-import { SelectPaymentMethodComponent } from "../containers/select-payment-method/select-payment-method.component";
 
 const landingRoutes: Routes = [
 	{
@@ -85,51 +76,6 @@ const landingRoutes: Routes = [
 		path: 'home',
 		component: HomeComponent,
 		canActivate: [HomeGuard]
-	},
-	{
-		path: 'play-friend',
-		component: PlayFriendComponent,
-		canActivate: [HomeGuard]
-	},
-	{
-		path: 'waiting-opponent',
-		component: WaitingOpponentComponent,
-		canActivate: [HomeGuard]
-	},
-	{
-		path: 'shop',
-		component: ShopTemplateComponent,
-		canActivate: [HomeGuard],
-		children: [
-			{
-				path:'',
-				component: ChesscoinShopComponent
-			},
-			{
-				path: 'buy',
-				children: [
-					{
-						path: '',
-						component: SelectPaymentMethodComponent
-					}
-				]
-			}
-		]
-	},
-	{
-		path: '',
-		component: MainTemplateComponent,
-		canActivate: [HomeGuard],
-		children: [
-			{
-				path: 'play-chesscoin',
-				component: PlayChesscoinComponent
-			},
-			{
-				path: 'play-free',
-				component: PlayFreeComponent
-			}
-		]
 	}
 	// {
 	//   path: 'about-us',

@@ -10,6 +10,7 @@ import { MaterialModule } from '../material/material.module';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AccordionDirective } from './directives/accordion.directive';
+import { WelcomeComponent } from "./components/welcome/welcome.component";
 
 // pipes
 import { NumberHumanizerPipe } from './pipes/number-humanizer.pipe';
@@ -40,6 +41,7 @@ import { WithdrawDialogComponent } from './components/dialogs/withdraw-dialog/wi
 		HeaderComponent,
 		LoadingComponent,
 		PaginatorComponent,
+		WelcomeComponent,
 		// directives
 		AccordionDirective,
 		// pipes
@@ -63,6 +65,7 @@ import { WithdrawDialogComponent } from './components/dialogs/withdraw-dialog/wi
 		HeaderComponent,
 		LoadingComponent,
 		PaginatorComponent,
+		WelcomeComponent,
 		// directives
 		AccordionDirective,
 		// pipes

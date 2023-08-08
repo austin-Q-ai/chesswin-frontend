@@ -24,8 +24,6 @@ import { PrivacyPolicyViewComponent } from './components/privacy-policy-view/pri
 import { SuggestedVideosComponent } from './components/how-to-view/suggested-videos/suggested-videos.component';
 import { VideoPlayerComponent } from './components/how-to-view/video-player/video-player.component';
 import { ContactUsViewComponent } from './components/contact-us-view/contact-us-view.component';
-import { PackagesViewComponent } from './components/packages-view/packages-view.component';
-import { WelcomeComponent } from './components/welcome/welcome.component';
 
 // dialogs
 import { PackagePaymentComponent } from './components/dialogs/package-payment/package-payment.component';
@@ -40,17 +38,6 @@ import { MainMenuComponent } from './components/main-menu/main-menu.component';
 import { MainMenuItemComponent } from './components/main-menu-item/main-menu-item.component';
 import { MainTemplateComponent } from './containers/main-template/main-template.component';
 import { HomeComponent } from './containers/home/home.component';
-import { PlaylistComponent } from './components/playlist/playlist.component';
-import { PlaylistItemComponent } from './components/playlist-item/playlist-item.component';
-import { PlayChesscoinComponent } from './containers/play-chesscoin/play-chesscoin.component';
-import { PlayFreeComponent } from './containers/play-free/play-free.component';
-import { PlayFriendComponent } from './containers/play-friend/play-friend.component';
-import { PlayFriendViewComponent } from './components/play-friend-view/play-friend-view.component';
-import { WaitingOpponentViewComponent } from './components/waiting-opponent-view/waiting-opponent-view.component';
-import { WaitingOpponentComponent } from './containers/waiting-opponent/waiting-opponent.component';
-import { ChesscoinShopComponent } from './containers/chesscoin-shop/chesscoin-shop.component';
-import { ShopTemplateComponent } from './containers/shop-template/shop-template.component';
-import { SelectPaymentMethodComponent } from './containers/select-payment-method/select-payment-method.component';
 
 @NgModule({
 	imports: [CommonModule, LandingRouting, ReactiveFormsModule],
@@ -72,7 +59,6 @@ import { SelectPaymentMethodComponent } from './containers/select-payment-method
 		VideoPlayerComponent,
 		ContactUsComponent,
 		ContactUsViewComponent,
-		WelcomeComponent,
 		// dialogs
 		PackagePaymentComponent,
 		TermsAndConditionsViewComponent,
@@ -85,18 +71,7 @@ import { SelectPaymentMethodComponent } from './containers/select-payment-method
 		MainMenuComponent,
 		MainMenuItemComponent,
 		MainTemplateComponent,
-		HomeComponent,
-		PlaylistComponent,
-		PlaylistItemComponent,
-		PlayChesscoinComponent,
-		PlayFreeComponent,
-		PlayFriendComponent,
-		PlayFriendViewComponent,
-		WaitingOpponentViewComponent,
-		WaitingOpponentComponent,
-		ChesscoinShopComponent,
-		ShopTemplateComponent,
-		SelectPaymentMethodComponent
+		HomeComponent
 	],
 	entryComponents: [PackagePaymentComponent]
 })
