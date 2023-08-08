@@ -49,6 +49,8 @@ import { PlayFriendViewComponent } from './components/play-friend-view/play-frie
 import { WaitingOpponentViewComponent } from './components/waiting-opponent-view/waiting-opponent-view.component';
 import { WaitingOpponentComponent } from './containers/waiting-opponent/waiting-opponent.component';
 import { ChesscoinShopComponent } from './containers/chesscoin-shop/chesscoin-shop.component';
+import { ShopTemplateComponent } from './containers/shop-template/shop-template.component';
+import { SelectPaymentMethodComponent } from './containers/select-payment-method/select-payment-method.component';
 
 @NgModule({
 	imports: [CommonModule, LandingRouting, ReactiveFormsModule],
@@ -92,7 +94,9 @@ import { ChesscoinShopComponent } from './containers/chesscoin-shop/chesscoin-sh
 		PlayFriendViewComponent,
 		WaitingOpponentViewComponent,
 		WaitingOpponentComponent,
-		ChesscoinShopComponent
+		ChesscoinShopComponent,
+		ShopTemplateComponent,
+		SelectPaymentMethodComponent
 	],
 	entryComponents: [PackagePaymentComponent]
 })

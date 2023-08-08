@@ -1,0 +1,26 @@
+<div class="select-area">
+	<div class="select-item">
+		<p>ITEMS:</p>
+		<div class="feat">
+			<button>+</button>
+			<button>-</button>
+			<p>PAW PACKET OF COINS</p>
+			<button>1</button>
+		</div>
+	</div>
+	<div class="title">Select your payment method:</div>
+	<button class="item" *ngFor="let item of ['Paypal', 'Stripe', 'Bitcoin', 'Binance Pay']"
+		(mouseenter)="isHovered[item] = true" (mouseleave)="leave(item)" (click)="itemClicked(item)">
+		<p>{{item}}</p>
+		<div class="round-out" *ngIf="isHovered[item]">
+			<div class="round-in" *ngIf="isClicked[item]">
+			</div>
+		</div>
+	</button>
+
+	<button class="continue">Continue</button>
+	<div class="total">
+		<p class="left">Total:</p>
+		<p class="right">$ 5.00</p>
+	</div>
+</div>

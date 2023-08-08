@@ -21,7 +21,9 @@ import { PlayChesscoinComponent } from '../containers/play-chesscoin/play-chessc
 import { PlayFreeComponent } from '../containers/play-free/play-free.component';
 import { PlayFriendComponent } from "../containers/play-friend/play-friend.component";
 import { WaitingOpponentComponent } from "../containers/waiting-opponent/waiting-opponent.component";
+import { ShopTemplateComponent } from "../containers/shop-template/shop-template.component";
 import { ChesscoinShopComponent } from "../containers/chesscoin-shop/chesscoin-shop.component";
+import { SelectPaymentMethodComponent } from "../containers/select-payment-method/select-payment-method.component";
 
 const landingRoutes: Routes = [
 	{
@@ -95,9 +97,24 @@ const landingRoutes: Routes = [
 		canActivate: [HomeGuard]
 	},
 	{
-		path: 'chesscoin-shop',
-		component: ChesscoinShopComponent,
-		canActivate: [HomeGuard]
+		path: 'shop',
+		component: ShopTemplateComponent,
+		canActivate: [HomeGuard],
+		children: [
+			{
+				path:'',
+				component: ChesscoinShopComponent
+			},
+			{
+				path: 'buy',
+				children: [
+					{
+						path: '',
+						component: SelectPaymentMethodComponent
+					}
+				]
+			}
+		]
 	},
 	{
 		path: '',
