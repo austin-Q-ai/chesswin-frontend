@@ -159,6 +159,14 @@ export class FacadeService {
 		return this.authService.login(username, password);
 	}
 
+	async signup(username: string, password: string, email: string, firstName: string, lastName: string, country: string) {
+		return this.authService.signup(username, password, email, firstName, lastName, country);
+	}
+
+	async verify(cognitousername: string, code: string) {
+		return this.authService.verify(cognitousername, code);
+	}
+
 	signOut() {
 		this.authService.signOut();
 

@@ -20,7 +20,7 @@ const routes: Routes = [
 			{
 				path: 'app',
 				loadChildren: () => import('../../chesswin/chess-app/chess-app.module').then(chessAppModule => chessAppModule.ChessAppModule),
-				// canActivate: [AuthGuard]
+				canActivate: [AuthGuard]
 			},
 		]
 	},

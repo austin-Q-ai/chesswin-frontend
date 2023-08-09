@@ -1,13 +1,14 @@
-<div class="profile">
+<div class="profile" *ngIf="user">
 	<div class="profile-basic">
 		<a routerLink="/" [ngStyle]="{'display':'flex','align-items': 'center'}">
 			<img class="avatar-img" src="../../../../assets/icons/updated/avatar cover.png" alt="avatar cover image" />
 		</a>
 		<div class="profile-user-name">
 			<div class="txt">
+				<!-- {{user?.given_name}} -->
 				Guest
 			</div>
-			<img class="flag-img" src="../../../../assets/images/flags/Canada.png" alt="flag image" />
+			<img class="flag-img" src="../../../../assets/images/flags/Can.png" alt="flag image" />
 		</div>
 	</div>
 	<div class="profile-gold">
@@ -21,3 +22,5 @@
 		</div>
 	</div>
 </div>
+
+<div [ngStyle]="{'height': '181px', 'border-bottom': '3px solid rgb(23, 45, 63)'}" *ngIf="!user"></div>

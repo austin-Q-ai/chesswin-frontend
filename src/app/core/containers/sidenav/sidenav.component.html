@@ -8,9 +8,9 @@
 							width="150px" />
 					</a>
 				</div>
-				<app-profile-view style="width: 100%;"></app-profile-view>
+				<app-profile-view style="width: 100%;" [user]="user | async"></app-profile-view>
 			</div>
-			<div *ngFor="let item of items">
+			<div *ngFor="let item of items" (click)="clickNavItem(item.url)" style="cursor: pointer;">
 				<app-sidenav-item [icon]="item.icon" [itemText]="item.itemText"></app-sidenav-item>
 			</div>
 			<app-sidenav-log-button></app-sidenav-log-button>
@@ -18,7 +18,8 @@
 
 		<mat-toolbar class="header-mobile">
 			<mat-menu #menu="matMenu" class="header-menu">
-				<button *ngFor="let item of items" style="width: 100%;background-color: #052534;">
+				<button *ngFor="let item of items" style="width: 100%;background-color: #052534; cursor: pointer;"
+					(click)="clickNavItem(item.url)">
 					<app-sidenav-item [icon]="item.icon" [itemText]="item.itemText"></app-sidenav-item>
 				</button>
 			</mat-menu>

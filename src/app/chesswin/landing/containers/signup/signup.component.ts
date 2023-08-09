@@ -89,17 +89,26 @@ export class SignupComponent implements OnInit, OnDestroy {
 		return !!control.errors;
 	}
 
-	async signup(userCredentials) {
+	async signup(signupInfo) {
 		this.requesting = true;
 		this.serverError = '';
 
 		try {
-			await this.facadeService.login(
-				userCredentials.email,
-				userCredentials.password
-			);
+			await this.facadeService.signup(
+				signupInfo.username,
+				signupInfo.password,
+				signupInfo.email,
+				signupInfo.firstName,
+				signupInfo.lastName,
+				signupInfo.country
+			).then(user => {
+				// console.log(user); // Accessing the result.user value
+				sessionStorage.setItem('cognitousername', JSON.stringify(signupInfo.username));
+			}).catch(error => {
+				console.error(error); // Handling any errors that occurred during signup
+			});
 
-			this.router.navigate(['/app/']);
+			this.router.navigate(['/verify/']);
 
 			this.requesting = false;
 		} catch (error) {
@@ -135,7 +144,11 @@ export class SignupComponent implements OnInit, OnDestroy {
 	createForm() {
 		return this.formBuilder.group({
 			email: ['', [Validators.required, Validators.email]],
-			password: ['', Validators.required]
+			password: ['', Validators.required],
+			firstName: ['', Validators.required],
+			lastName: ['', Validators.required],
+			country: ['', Validators.required],
+			username: ['', Validators.required],
 		});
 	}
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
 	selector: 'app-main-menu',
@@ -8,14 +9,19 @@ import { Component, OnInit } from '@angular/core';
 export class MainMenuComponent implements OnInit {
 
 	items = [
-		{ 'icon':'coins', 'itemText': 'Play with ChessCoin', 'img': 'horse', 'background': 'gold'},
-		{ 'icon':'hand with coin', 'itemText': 'ChessCoin Shop', 'img': 'queen', 'background': 'gold'},
-		{ 'icon':'caballo', 'itemText': 'Play for free', 'img': 'horse', 'background': 'plata'},
-		{ 'icon':'cubo', 'itemText': 'Play with Friends', 'img': 'queen', 'background': 'gold'},
+		{ 'icon':'coins', 'itemText': 'Play with ChessCoin', 'img': 'horse', 'background': 'gold', 'url': '/app/play-chesscoin'},
+		{ 'icon':'hand with coin', 'itemText': 'ChessCoin Shop', 'img': 'queen', 'background': 'gold', 'url': '/app/shop'},
+		{ 'icon':'caballo', 'itemText': 'Play for free', 'img': 'horse', 'background': 'plata', 'url': '/app/play-free'},
+		{ 'icon':'cubo', 'itemText': 'Play with Friends', 'img': 'queen', 'background': 'gold', 'url': '/app/play-friend'},
 	]
 
 	constructor(
+		private router: Router
 	) {}
 
 	ngOnInit(): void {}
+
+	navigate(url: string) {
+		this.router.navigate([url]);
+	}
 }

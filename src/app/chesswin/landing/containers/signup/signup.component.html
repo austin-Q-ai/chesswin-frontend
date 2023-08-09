@@ -18,32 +18,33 @@
 					<div class="singup-name-field">
 						<div class="form-group">
 							<mat-form-field appearance="outline">
-								<input matInput placeholder="First Name">
+								<input matInput formControlName="firstName" placeholder="First Name">
 							</mat-form-field>
 						</div>
 						<div class="form-group">
 							<mat-form-field appearance="outline">
-								<input matInput placeholder="Last Name">
+								<input matInput formControlName="lastName" placeholder="Last Name">
 							</mat-form-field>
 						</div>
 					</div>
 					<div class="form-group">
 						<mat-form-field appearance="outline">
 							<mat-icon matPrefix>person</mat-icon>
-							<input matInput placeholder="Nickname">
+							<input matInput formControlName="username" placeholder="Nickname">
 						</mat-form-field>
 					</div>
 					<div class="form-group">
 						<mat-form-field appearance="outline">
 							<mat-icon matPrefix>email</mat-icon>
-							<input matInput placeholder="Email address">
+							<input matInput formControlName="email" placeholder="Email address">
 						</mat-form-field>
 					</div>
 
 					<div class="form-group">
 						<mat-form-field appearance="outline">
 							<mat-icon matPrefix>lock</mat-icon>
-							<input matInput [type]="hide ? 'password' : 'text'" placeholder="Password">
+							<input matInput [type]="hide ? 'password' : 'text'" formControlName="password"
+								placeholder="Password">
 							<button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
 								[attr.aria-pressed]="hide">
 								<mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
@@ -59,7 +60,7 @@
 									height="36" style="margin-left: 5px;">
 							</mat-icon>
 							<input matInput [matAutocomplete]="auto" [formControl]="countryControl"
-								[(ngModel)]="selectedCountry" placeholder="Select a country">
+								[(ngModel)]="selectedCountry" formControlName="country" placeholder="Select a country">
 							<mat-autocomplete #auto="matAutocomplete">
 								<mat-option *ngFor="let country of filteredCountries | async" [value]="country"
 									(onSelectionChange)="onSelecteCountry">

@@ -7,14 +7,15 @@
 					<div class="form-group">
 						<mat-form-field appearance="outline">
 							<mat-icon matPrefix>email</mat-icon>
-							<input matInput placeholder="Email address">
+							<input matInput formControlName="email" placeholder="Email address">
 						</mat-form-field>
 					</div>
 
 					<div class="form-group">
 						<mat-form-field appearance="outline">
 							<mat-icon matPrefix>lock</mat-icon>
-							<input matInput [type]="hide ? 'password' : 'text'" placeholder="Password">
+							<input matInput [type]="hide ? 'password' : 'text'" formControlName="password"
+								placeholder="Password">
 							<button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
 								[attr.aria-pressed]="hide">
 								<mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
@@ -36,26 +37,6 @@
 						<p *ngIf="!requesting; else loginLoading">GUEST PLAYER</p>
 					</button>
 				</form>
-
-				<!-- <div class="download-app-area">
-					<div class="content-centered">
-						<p class="paragraph text-apricot text-uppercase">
-							DOWNLOAD THE APP AND SIGN IN
-						</p>
-					</div>
-
-					<div class="action-buttons">
-						<a href="https://apps.apple.com/us/app/chess-win/id1487134837" rel="noopener" target="_blank">
-							<img alt="available-on-the-app-store-image"
-								src="../../../../../assets/images/available-on-the-app-store.png" />
-						</a>
-						<a href="https://chesswin-front.s3.amazonaws.com/assets/downloads/chesswin-latest.apk"
-							rel="noopener" target="_blank">
-							<img alt="get-it-on-google-play-image"
-								src="../../../../../assets/images/get-it-on-google-play.png" />
-						</a>
-					</div>
-				</div> -->
 			</div>
 			<img alt="chess-win-presentation-image" class="presentation-image"
 				src="../../../../../assets/images/presentation-image.png" />

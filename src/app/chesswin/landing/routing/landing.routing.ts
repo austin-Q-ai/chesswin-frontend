@@ -29,28 +29,23 @@ const landingRoutes: Routes = [
 	},
 	{
 		path: 'faq',
-		component: FaqComponent,
-		canActivate: [HomeGuard]
+		component: FaqComponent
 	},
 	{
 		path: 'fair-play',
-		component: FairPlayComponent,
-		canActivate: [HomeGuard]
+		component: FairPlayComponent
 	},
 	{
 		path: 'privacy',
-		component: PrivacyPolicyComponent,
-		canActivate: [HomeGuard]
+		component: PrivacyPolicyComponent
 	},
 	{
 		path: 'how-to',
-		component: HowToComponent,
-		canActivate: [HomeGuard]
+		component: HowToComponent
 	},
 	{
 		path: 'contact-us',
-		component: ContactUsComponent,
-		canActivate: [HomeGuard]
+		component: ContactUsComponent
 	},
 	{
 		path: '',
@@ -59,13 +54,11 @@ const landingRoutes: Routes = [
 	},
 	{
 		path: 'terms-and-conditions',
-		component: TermsAndConditionsComponent,
-		canActivate: [HomeGuard]
+		component: TermsAndConditionsComponent
 	},
 	{
 		path: 'refund-policy',
-		component: RefundPolicyComponent,
-		canActivate: [HomeGuard]
+		component: RefundPolicyComponent
 	},
 	{
 		path: 'verify',
@@ -74,8 +67,7 @@ const landingRoutes: Routes = [
 	},
 	{
 		path: 'home',
-		component: HomeComponent,
-		canActivate: [HomeGuard]
+		component: HomeComponent
 	}
 	// {
 	//   path: 'about-us',

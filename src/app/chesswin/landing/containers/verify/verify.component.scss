@@ -108,13 +108,7 @@
 					::ng-deep .mat-input-element {
 						caret-color: #ecbe7d !important;
 						color: white;
-						padding-left: 10px;
-					}
-
-					.country-form {
-						::ng-deep .mat-input-element {
-							padding-left: 45px;
-						}
+						padding-left: 4px;
 					}
 
 					::ng-deep .mat-input-element::placeholder {

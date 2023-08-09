@@ -2,20 +2,20 @@ export const environment = {
 	production: false,
 
 	cognito: {
-		identityPoolId: 'us-east-1:d5a20882-05be-48cc-82bc-fcb9b2211080',
-		poolId: 'us-east-1_i7YIR7dpe',
-		poolName: 'i7YIR7dpe',
-		webClientId: '252vhvn71nnnoromuhovo6qvg1',
+		identityPoolId: 'us-east-1:b3796c0d-bdb6-4a87-a0cf-5507bad14df1',
+		poolId: 'us-east-1_Ts5kGVwQz',
+		poolName: 'chess-identity-pool',
+		webClientId: '6v3baohtsd1r1lru9136osuebq',
 		region: 'us-east-1',
 	},
 
 	socket: {
-		userPoolName: 'ChessGame',
-		userPoolId: 'us-east-1_i7YIR7dpe',
-		userPoolWebClientId: '252vhvn71nnnoromuhovo6qvg1',
-		identityPoolId: 'us-east-1:d5a20882-05be-48cc-82bc-fcb9b2211080',
+		userPoolName: 'chess-user-pool',
+		userPoolId: 'us-east-1_Ts5kGVwQz',
+		userPoolWebClientId: '6v3baohtsd1r1lru9136osuebq',
+		identityPoolId: 'us-east-1:b3796c0d-bdb6-4a87-a0cf-5507bad14df1',
 		userPoolRegion: 'us-east-1',
-		webSocketUrl: 'wss://iwbi8s1f69.execute-api.us-east-1.amazonaws.com/prod?userId=',
+		webSocketUrl: ' wss://0d0o8mpqqg.execute-api.us-east-1.amazonaws.com/prod?userId=',
 	},
 
 	lambdaAlias: '$LATEST',

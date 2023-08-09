@@ -1,5 +1,5 @@
 <div class="main-menu">
-	<div *ngFor="let item of items">
+	<div *ngFor="let item of items" (click)="navigate(item.url)" style="cursor: pointer;">
 		<app-main-menu-item [icon]="item.icon" [itemText]="item.itemText" [image]="item.img"
 			[background]="item.background"></app-main-menu-item>
 	</div>

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 // aws cognito
 import * as AWS from 'aws-sdk/global';
-import { AuthenticationDetails, CognitoUserPool, CognitoUser, CognitoUserSession } from 'amazon-cognito-identity-js';
+import { AuthenticationDetails, CognitoUserAttribute, CognitoUserPool, CognitoUser, CognitoUserSession } from 'amazon-cognito-identity-js';
 
 // rxjs
 import { BehaviorSubject, Observable } from 'rxjs';
@@ -123,6 +123,44 @@ export class AuthService {
 
 				onFailure: error => {
 					reject(error);
+				}
+			});
+		});
+	}
+
+	signup(username: string, password: string, email: string, firstName: string, lastName: string, country: string) {
+		const attributeList = [];
+	
+		attributeList.push(new CognitoUserAttribute({ Name: 'email', Value: email }));
+		attributeList.push(new CognitoUserAttribute({ Name: 'given_name', Value: firstName }));
+		attributeList.push(new CognitoUserAttribute({ Name: 'family_name', Value: lastName }));
+		attributeList.push(new CognitoUserAttribute({ Name: 'locale', Value: country }));
+	
+		return new Promise((resolve, reject) => {
+			this.userPool.signUp(username, password, attributeList, null, (error, result) => {
+				if (error) {
+					reject(error);
+				} else {
+					resolve(result.user);
+				}
+			});
+		});
+	}
+
+	verify(cognitousername: string, code: string) {
+		const userData = {
+			Username: cognitousername,
+			Pool: this.userPool
+		};
+
+		const cognitoUser = new CognitoUser(userData);
+
+		return new Promise((resolve, reject) => {
+			cognitoUser.confirmRegistration(code, true, (confirmError, confirmResult) => {
+				if (confirmError) {
+					reject(confirmError);
+				} else {
+					resolve(confirmResult);
 				}
 			});
 		});

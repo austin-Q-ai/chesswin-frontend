@@ -16,15 +16,15 @@
 						<P class="font-sand">10:00</P>
 					</div>
 					<div class="form-group verify-code">
-						<mat-form-field appearance="outline" *ngFor=" let i of [0,1,2,3,4]" style="width: 17%;">
+						<mat-form-field appearance="outline" *ngFor=" let i of [0,1,2,3,4,5]" style="width: 14%;">
 							<input matInput type="number" [pattern]="'[0-9]'" maxlength="1"
-								style="height: 60px;font-size: 40px;" class="font-sand">
+								style="height: 60px;font-size: 40px;" class="font-sand" id="digit{{i}}">
 						</mat-form-field>
 					</div>
 
 					<!-- <p class="verify-link">Incorrect Code, please try again</p> -->
 
-					<button [disabled]="requesting" class="button button-sand-gradient" tabindex="3" type="submit">
+					<button [disabled]="requesting" class="button button-sand-gradient" tabindex="3" (click)="verify()">
 						<p *ngIf="!requesting; else loginLoading">Confirm Account</p>
 					</button>
 
